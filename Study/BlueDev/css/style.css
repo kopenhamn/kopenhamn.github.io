@@ -1,26 +1,29 @@
 * {
     margin: 0;
     padding: 0;
-    text-align: left;
 }
 body {
-    width: 100%;
-    height: 100px;
+    margin: 0;
+    padding: 0;
     background: #000;
-    color: #000;
-    overflow: visible;
+    color: #fff;
+    font-family: arial, sans-serif;
+    background-image: url(../images/weback.jpg);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #container {
-
-    width: 1000px;
-    background-position: top;
-    background-repeat: repeat-y;
-    background-image: url(../images/weback.jpg);
+    width: 960px;
     margin: auto;
-    font-family: arial, sans-serif;
+
 }
 header {
-    background: rgba(2, 212, 250, 0.5);
+    background: rgba(74, 110, 171, 0.8);
     width: 100%;
     height: 60px;
     margin: auto;
@@ -32,26 +35,31 @@ header h1 {
 }
 header h3 {
     float: right;
-    color: #5596c6;
+    color: rgb(76, 130, 214);
     padding: 20px 20px 0 0;
 }
 .color-blue {
-    color: #5596c6;
+    color: rgb(76, 130, 214);
 }
 .color-white {
     color: #fff;
 }
 #menu {
+    text-align: center;
     background: rgba(119, 119, 119, 0.2);
     display: block;
     width: 100%;
     height: 42px;
     margin-top: 5px;
+
+}
+#menu ul {
+    justify-content: center;
 }
 #menu li {
     list-style: none;
     float: left;
-    margin: 0;
+    margin-left: 20px;
     padding-top: 10px;
 }
 #menu a {
@@ -65,4 +73,82 @@ header h3 {
 #menu a:hover {
     background: rgba(119, 119, 119, 0.5);
     color: #def1ff;
+}
+#leftmenu {
+    float: left;
+    /*background: rgba(2, 212, 250, 0.5);*/
+    /*background: rgba(45, 137, 154, 0.7);*/
+    background: rgba(74, 110, 171, 0.7);
+    width: 180px;
+    border-radius: 10px;
+    margin: 10px 5px 10px 0px;
+    padding: 10px;
+    color: #fff;
+}
+#leftmenu h3 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid #fff;
+    padding: 5px 0;
+}
+#leftmenu li {
+    list-style: none;
+    margin: 0;
+    width: 180px;
+    padding: 15px 0;
+    border-bottom: 1px dashed #fff;
+
+}
+#leftmenu a {
+    text-align: justify;
+    width: 180px;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+#leftmenu a:hover {
+    color: #5596c6;
+}
+section .float {
+    float: right;
+    margin: 15px;
+}
+section {
+    /*background: rgba(2, 212, 250, 0.2);*/
+    /*background: rgba(23, 25, 26, 0.8);*/
+    background: rgba(119, 119, 119, 0.5);
+    border-radius: 10px;
+    margin: 10px 0 5px 5px;
+    border: 2px solid rgb(74, 110, 171);
+    float: left;
+    width: 725px;
+    padding: 10px;
+}
+h2 {
+    padding-bottom:10px;
+}
+h3 {
+    color: rgb(76, 130, 214);
+    padding: 10px 0;
+    }
+h4 {
+    color: rgb(76, 130, 214);
+    ont-weight:bold;
+	padding-bottom:5px;
+}
+.developer {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+
+}
+.developer li {
+    list-style: none;
+    padding: 5px;
+    line-height: 1.5;
+}
+.developer span {
+    font-weight: bold;
 }
