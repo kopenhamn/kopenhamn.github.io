@@ -150,7 +150,7 @@ article#main-col{
   width:65%;
 }
 /* Media Queries */
-@media(max-width: 768px){
+@media(max-width: 768px) {
   header #branding,
   header nav,
   header nav li,
@@ -158,27 +158,27 @@ article#main-col{
   #newsletter form,
   #boxes .box,
   article#main-col,
-  aside#sidebar{
+  aside#sidebar {
     float:none;
     text-align:center;
     width:100%;
+    }
+
+  header {
+      padding-bottom:20px;
+}
+
+  #showcase h1 {
+      margin-top:40px;
   }
 
-  header{
-    padding-bottom:20px;
-  }
+  #newsletter button, .quote button {
+      display:block;
+      width:100%;
+    }
 
-  #showcase h1{
-    margin-top:40px;
-  }
-
-  #newsletter button, .quote button{
-    display:block;
-    width:100%;
-  }
-
-  #newsletter form input[type="email"], .quote input, .quote textarea{
-    width:100%;
-    margin-bottom:5px;
+  #newsletter form input[type="email"], .quote input, .quote textarea {
+      width:100%;
+      margin-bottom:5px;
   }
 }
