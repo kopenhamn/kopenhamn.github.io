@@ -10,6 +10,9 @@ body {
     margin: auto;
     overflow: hidden;
 }
+.current a:hover {
+    color: #ffffff;
+}
 ul {
     margin: 0;
     padding: 0;
@@ -66,7 +69,7 @@ header .highlight, .current a {
     font-weight: bold;
 }
 header a:hover {
-    color: #cccccc;
+    color: #e8491d;
 }
 /* Showcase */
 #showcase{
