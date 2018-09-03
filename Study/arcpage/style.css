@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    text-align: center;
+    margin: 50px;
+}
+
+
+.main header {
+    padding-top: 20px;
+    padding: 200px 0;
+    background: rgba(243, 255, 0, 0.3);
+    display: inline-block;
+    width: 80%;
+}
+.main h1{
+    font-family: arial;
+    font-size: 55px;
+    text-transform: uppercase;
+    color: rgba(56, 59, 47, 1);
+
+}
+.back {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+footer {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(243, 255, 0, 0.3);
+    width: 100%;
+    margin:auto;
+    clear: both;
+}
