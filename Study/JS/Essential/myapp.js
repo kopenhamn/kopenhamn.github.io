@@ -104,3 +104,12 @@ function name (){
 
     return cons(fullname);
 }
+
+function myaddres () {
+    var city = "Kyiv";
+    var country = "Ukraine";
+    function fulladdres (x, y){
+        return "I leave in " + x + ", this is the best city in " + y + "!";
+    }
+    return fulladdres (city, country);
+}
