@@ -89,7 +89,7 @@ var array = [
     {car : "ford"},
     function() {return "drive";}
 ]
-*/
+
 
 //some functions in work:
 
@@ -113,3 +113,32 @@ function myaddres () {
     }
     return fulladdres (city, country);
 }
+
+
+//callableObjects
+
+function myname (fullname){
+    return fullname.firstname + fullname.lastname;
+}
+console.log(myname ({firstname: "Michael", lastname: "Feninets"}));
+
+//callableObjects
+
+console.log(name (function (){
+    return "embed";
+}))
+function name (fullname) {
+    return fullname();
+}
+
+
+var myName = "Michael1"       //executed
+
+console.log( myName, myName2,names3());
+
+var myName2 = "Michael2"       //not executed
+function names3 (name) {       //executed
+    return "Michael3";
+}
+
+*/
