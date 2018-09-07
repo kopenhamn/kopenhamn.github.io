@@ -141,4 +141,28 @@ function names3 (name) {       //executed
     return "Michael3";
 }
 
+
+// some new featers of function capability
+
+var yourage = 17;
+var array = [
+    "Michael",
+    "Olga",
+    "Natalia",
+    "Viktor",
+    "MichaelOld",
+    function(y){
+        if (y>16) {
+            return ', your age fits'
+        }
+        else {
+            return ", your age doesn't fit"
+        }
+    }
+];
+
+function myname(name){
+    return "MR./MRs. " + array[1] + name;
+}
+console.log(myname(array[5](yourage)));
 */
