@@ -165,4 +165,33 @@ function myname(name){
     return "MR./MRs. " + array[1] + name;
 }
 console.log(myname(array[5](yourage)));
+
+var list = [
+    "Alpha",
+    100,
+    240,
+    "Beta"
+]
+var obj = {
+    color : "red",
+    speed : 160,
+    engine : {
+        ar : 200,
+        ad : "first"
+    }
+}
 */
+
+//object constructor (interesting!)
+
+function Apple (x, y, color, scale) {
+    this.xAxes = x;
+    this.yAxes = y;
+    this.colorOfItem = color;
+    this.scaleOfItem = scale;
+    return this;
+}
+var apple1 = new Apple(100, 200, "red", 300);
+var apple2 = new Apple(50, 80, "yellow", 200);
+var apple3 = new Apple(100, 300, "green", 300);
+console.log(Apple(), new Apple(), apple1, apple2, apple3);
