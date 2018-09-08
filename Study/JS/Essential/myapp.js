@@ -166,7 +166,6 @@ function myname(name){
 }
 console.log(myname(array[5](yourage)));
 
-
 var list = [
     "Alpha",
     100,
