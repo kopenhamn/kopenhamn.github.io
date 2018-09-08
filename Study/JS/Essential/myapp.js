@@ -191,7 +191,11 @@ function Apple (x, y, color, scale) {
     this.scaleOfItem = scale;
     return this;
 }
+Apple.prototype = {
+    eat : function(){return this;},
+    throw : function () {return "throw the apple"}
+}
 var apple1 = new Apple(100, 200, "red", 300);
 var apple2 = new Apple(50, 80, "yellow", 200);
 var apple3 = new Apple(100, 300, "green", 300);
-console.log(Apple(), new Apple(), apple1, apple2, apple3);
+console.log(Apple(), new Apple(), apple1, apple2, apple3, Apple.prototype.eat().throw(), Apple.prototype.throw(), apple2.eat());
