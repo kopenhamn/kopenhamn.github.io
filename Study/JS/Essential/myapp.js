@@ -200,7 +200,7 @@ var apple2 = new Apple(50, 80, "yellow", 200);
 var apple3 = new Apple(100, 300, "green", 300);
 console.log(Apple(), new Apple(), apple1, apple2, apple3, Apple.prototype.eat().throw(), Apple.prototype.throw(), apple2.eat());
 
-*/
+
 
 // for in loop (not logic but can be as a formula!)
 var classRegister = ["A", "B", "C"]
@@ -209,3 +209,8 @@ for ( var i in classRegister)
 {
     console.log(classRegister[i]);
 }
+*/
+
+var el = document.getElementById('style');
+el.style.cssText = " background: #c4c4c4; color: red; width: 300px";
+el.style.cssText += "height: 200px;"
