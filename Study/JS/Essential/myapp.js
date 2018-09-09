@@ -209,8 +209,15 @@ for ( var i in classRegister)
 {
     console.log(classRegister[i]);
 }
-*/
+
 
 var el = document.getElementById('style');
 el.style.cssText = " background: #c4c4c4; color: red; width: 300px";
 el.style.cssText += "height: 200px;"
+*/
+
+var select = document.getElementsByName('cars')[0];
+
+select.onclick = function (event) {console.log(event)};
+
+select.addEventListener( 'click' );
