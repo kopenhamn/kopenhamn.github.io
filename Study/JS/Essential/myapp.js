@@ -259,3 +259,12 @@ element.style.cssText = "background: yellow; color: black; width: 200px; height:
 document.body.appendChild(element);
 
 */
+var select = document.createElement('div');
+
+select.style.cssText = "background: green; width: 200px; height: 20px;"
+
+select.onclick = function(){ alert('hello')};
+
+//document.body.appendChild(select);
+var target = document.getElementById('yellow');
+document.body.insertBefore(select, target);
