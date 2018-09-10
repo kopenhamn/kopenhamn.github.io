@@ -258,7 +258,7 @@ element.style.cssText = "background: yellow; color: black; width: 200px; height:
 
 document.body.appendChild(element);
 
-*/
+
 var select = document.createElement('div');
 
 select.style.cssText = "background: green; width: 200px; height: 20px;"
@@ -268,3 +268,25 @@ select.onclick = function(){ alert('hello')};
 //document.body.appendChild(select);
 var target = document.getElementById('yellow');
 document.body.insertBefore(select, target);
+
+function set () {
+    let elements = document.getElementsByName('param');
+    console.log(elements)
+}
+document.getElementById('set').addEventListener('click', set);
+*/
+
+//FINAL PROJECT
+
+function set() {
+    let element = document.getElementsByName('param');
+    for (let index = 0; index < element.length; index++){
+        let cssProperty = element[index].getAttribute('id');
+        let cssValue = element[index].value;
+        console.log(cssProperty, cssValue);
+        let div = document.getElementById('modify');
+        div.style[cssProperty] = cssValue;
+    }
+
+}
+document.getElementById('set').addEventListener('click', set);
