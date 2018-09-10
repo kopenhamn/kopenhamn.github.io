@@ -214,10 +214,37 @@ for ( var i in classRegister)
 var el = document.getElementById('style');
 el.style.cssText = " background: #c4c4c4; color: red; width: 300px";
 el.style.cssText += "height: 200px;"
-*/
+
 
 var select = document.getElementsByName('cars')[0];
 
 select.onclick = function (event) {console.log(event)};
 
 select.addEventListener( 'click' );
+select.onclick = function(ev){console.log(ev)};
+
+
+var select = document.getElementsByName('cars')[0];
+
+
+function ClickCallback(event){
+    console.log('clicked by add event listener');
+}
+
+select.addEventListener('click', ClickCallback);
+// EventListener
+var pushforstyle = document.getElementById('pushTheButton');
+var el = document.getElementById('style');
+
+function gostyle(ev){
+    el.style.cssText = "background: yellow; color: white; width: 500px";
+}
+function gostyle2(ev){
+    el.style.cssText = "background: green; color: white; width: 500px";
+}
+//pushforstyle.onclick = gostyle;
+
+pushforstyle.addEventListener('click', gostyle);
+pushforstyle.addEventListener('click', gostyle2);
+pushforstyle.removeEventListener('click', gostyle2);
+*/
