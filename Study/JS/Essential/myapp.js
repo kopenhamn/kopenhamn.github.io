@@ -232,19 +232,30 @@ function ClickCallback(event){
 }
 
 select.addEventListener('click', ClickCallback);
+
 // EventListener
 var pushforstyle = document.getElementById('pushTheButton');
 var el = document.getElementById('style');
+
 
 function gostyle(ev){
     el.style.cssText = "background: yellow; color: white; width: 500px";
 }
 function gostyle2(ev){
-    el.style.cssText = "background: green; color: white; width: 500px";
+    el.innerHTML = "This text is changed!";
 }
+
 //pushforstyle.onclick = gostyle;
 
 pushforstyle.addEventListener('click', gostyle);
 pushforstyle.addEventListener('click', gostyle2);
-pushforstyle.removeEventListener('click', gostyle2);
+
+// add new div with js and style it
+
+var element = document.createElement('div');
+
+element.style.cssText = "background: yellow; color: black; width: 200px; height:200px;"
+
+document.body.appendChild(element);
+
 */
