@@ -274,12 +274,12 @@ function set () {
     console.log(elements)
 }
 document.getElementById('set').addEventListener('click', set);
-*/
+
 
 //FINAL PROJECT
 
 function set() {
-    let element = document.getElementsByName('param');
+    let element = document.getElementsByName('property');
     for (let index = 0; index < element.length; index++){
         let cssProperty = element[index].getAttribute('id');
         let cssValue = element[index].value;
@@ -289,4 +289,19 @@ function set() {
     }
 
 }
+document.getElementById('set').addEventListener('click', set);
+*/
+
+function set() {
+    let element = document.getElementsByName('property');
+    for(let index = 0; index < element.length; index++){
+        let cssProperty = element[index].getAttribute('id');
+        let cssValue = element[index].value;
+        console.log( cssProperty, cssValue );
+        let div = document.getElementById('modify');
+        div.style[cssProperty] = cssValue;
+    }
+
+}
+
 document.getElementById('set').addEventListener('click', set);
