@@ -294,14 +294,26 @@ document.getElementById('set').addEventListener('click', set);
 
 function set() {
     let element = document.getElementsByName('property');
-    for(let index = 0; index < element.length; index++){
+    for (let index = 0; index < element.length; index++) {
         let cssProperty = element[index].getAttribute('id');
         let cssValue = element[index].value;
-        console.log( cssProperty, cssValue );
+        console.log(cssProperty, cssValue);
         let div = document.getElementById('modify');
         div.style[cssProperty] = cssValue;
     }
 
 }
-
 document.getElementById('set').addEventListener('click', set);
+
+function setcolor (){
+    let elem = document.getElementsByClassName('background');
+    let colorAtr = elem[0].getAttribute('class');
+    let colorValue = elem[0].value;
+    let div = document.getElementById('modcolor');
+    console.log(colorAtr, colorValue);
+    div.style[colorAtr] = colorValue;
+
+}
+document.getElementById('getColor').addEventListener('click', setcolor);
+
+// I HAVE DONE IT!!!
