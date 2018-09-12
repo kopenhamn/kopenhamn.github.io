@@ -147,7 +147,7 @@ function colorRect(x, y, w, h, c){
     canvasContext.fillRect(x, y, w, h);
 }
 
-*/
+
 
 //ver. 6 (next state Circle!)
 
@@ -189,7 +189,7 @@ function colorCircle(x, y, r, c){
     canvasContext.beginPath();
     canvasContext.arc(x, y, r, 0,Math.PI*2,true);
     canvasContext.fill();
-}*/
+}
 //my try
 
 function colorCircle(x, y, r, c){
@@ -203,6 +203,54 @@ function colorCircle(x, y, r, c){
 function colorRect(x, y, w, h, c){
     canvasContext.fillStyle = c;
     canvasContext.fillRect(x, y, w, h);
-}
+}*/
 
 //next is going to be hard one (mouse position and rect movment)
+
+var canvas = document.getElementById('gameCanvas');
+var canvasContext = canvas.getContext('2d');
+var ballX = 50;
+var ballY = 50;
+var ballSpeedX = 10;
+var ballSpeedY = 10;
+var FramesPerSecond = 1000;
+
+window.onload = function(){
+    setInterval(function(){moveEverything(); drawEverything()}, 1000/FramesPerSecond);
+
+}
+
+function moveEverything(){
+    ballX = ballX + ballSpeedX;
+    if(ballX > canvas.width){
+        ballSpeedX = - ballSpeedX;
+    }
+    if(ballX < 0){
+        ballSpeedX = - ballSpeedX;
+    }
+    ballY = ballY + ballSpeedY;
+    if(ballY > canvas.height){
+        ballSpeedY = - ballSpeedY;
+    }
+    if(ballY < 0){
+        ballSpeedY = - ballSpeedY;
+    }
+}
+
+function drawEverything(){
+    colorRect(0, 0, canvas.width, canvas.height, 'black');
+    colorCircle(ballX, ballY, 10, 'white');
+    colorRect(0, 100, 10, 80, 'white');
+}
+
+function colorRect(x, y, w, h, c) {
+    canvasContext.fillStyle = c;
+    canvasContext.fillRect(x, y, w, h);
+}
+
+function colorCircle(x, y, r, c) {
+    canvasContext.fillStyle = c;
+    canvasContext.beginPath();
+    canvasContext.arc(x, y, r, 0,Math.PI*2,true);
+    canvasContext.fill();
+}
