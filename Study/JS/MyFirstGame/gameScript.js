@@ -203,7 +203,7 @@ function colorCircle(x, y, r, c){
 function colorRect(x, y, w, h, c){
     canvasContext.fillStyle = c;
     canvasContext.fillRect(x, y, w, h);
-}*/
+}
 
 //next is going to be hard one (mouse position and rect movment)
 
@@ -254,3 +254,55 @@ function colorCircle(x, y, r, c) {
     canvasContext.arc(x, y, r, 0,Math.PI*2,true);
     canvasContext.fill();
 }
+*/
+//once again repeat the script
+
+var canvas = document.getElementById('gameCanvas');
+var canvasContext = canvas.getContext('2d');
+var ballX = 50;
+var ballY = 50;
+var ballSpeedX = 10;
+var ballSpeedY = 10;
+var FPS = 30;
+
+window.onload = function () {
+    setInterval(function () {moveEverything(); drawEverything()}, 1000/FPS);
+}
+
+function drawEverything(){
+    colorRect(0, 0, canvas.width, canvas.height, 'black');
+
+    colorCircle(ballX, ballY, 10, 'white');
+
+    colorRect(0, 100, 10, 100, 'white');
+}
+
+function moveEverything() {
+    ballX = ballX + ballSpeedX;
+    if(ballX > canvas.width){
+        ballSpeedX = - ballSpeedX;
+    }
+    if(ballX < 0){
+        ballSpeedX = - ballSpeedX;
+    }
+    ballY = ballY + ballSpeedY;
+    if(ballY > canvas.height){
+        ballSpeedY = - ballSpeedY;
+    }
+    if(ballY < 0){
+        ballSpeedY = - ballSpeedY;
+    }
+}
+
+function colorRect(x, y, w, h, c) {
+    canvasContext.fillStyle = c;
+    canvasContext.fillRect(x, y, w, h);
+}
+
+function colorCircle(x, y, r, c) {
+    canvasContext.fillStyle = c;
+    canvasContext.beginPath();
+    canvasContext.arc(x, y, r, 0,Math.PI*2, true);
+    canvasContext.fill();
+}
+// next script is hard to logic understand, lets try - mouse following
