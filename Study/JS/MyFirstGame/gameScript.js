@@ -264,9 +264,13 @@ var ballY = 50;
 var ballSpeedX = 10;
 var ballSpeedY = 10;
 var FPS = 30;
+var paddle1Y;
+var paddleHeight = 100;
+
 
 window.onload = function () {
     setInterval(function () {moveEverything(); drawEverything()}, 1000/FPS);
+    canvas.addEventListener('mousemove', function() {var mousePos = calcMousePos(event); paddle1Y = mousePos.y - (paddleHeight/2)});
 }
 
 function drawEverything(){
@@ -274,7 +278,7 @@ function drawEverything(){
 
     colorCircle(ballX, ballY, 10, 'white');
 
-    colorRect(0, 100, 10, 100, 'white');
+    colorRect(0, paddle1Y, 10, paddleHeight, 'white');
 }
 
 function moveEverything() {
@@ -306,3 +310,14 @@ function colorCircle(x, y, r, c) {
     canvasContext.fill();
 }
 // next script is hard to logic understand, lets try - mouse following
+
+function calcMousePos() {
+    var rect = canvas.getBoundingClientRect();
+    var root = document.documentElement;
+    var mouseX = event.clientX - rect.left - root.scrollLeft;
+    var mouseY = event.clientY - rect.top - root.scrollTop;
+    return {
+        x:mouseX,
+        y:mouseY,
+    }
+}
