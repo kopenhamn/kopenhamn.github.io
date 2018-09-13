@@ -310,7 +310,7 @@ function colorCircle(x, y, r, c) {
     canvasContext.fill();
 }
 // next script is hard to logic understand, lets try - mouse following
-
+/*
 function calcMousePos() {
     var rect = canvas.getBoundingClientRect();
     var root = document.documentElement;
@@ -319,5 +319,20 @@ function calcMousePos() {
     return {
         x:mouseX,
         y:mouseY,
+    }
+}
+
+*/
+//rewriting mouseListening part of code
+
+
+function calcMousePos() {
+    let rect = canvas.getBoundingClientRect();
+    let root = document.documentElement;
+    let mouseX = event.clientX - rect.left - root.scrollLeft;
+    let mouseY = event.clientY - rect.top - root.scrollTop;
+    return{
+        x:mouseX,
+        y:mouseY
     }
 }
