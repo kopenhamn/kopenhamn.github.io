@@ -261,16 +261,21 @@ var canvas = document.getElementById('gameCanvas');
 var canvasContext = canvas.getContext('2d');
 var ballX = 50;
 var ballY = 50;
-var ballSpeedX = 10;
-var ballSpeedY = 10;
+var ballSpeedX = 15;
+var ballSpeedY = 5;
 var FPS = 30;
 var paddle1Y;
+var paddle2Y = 250;
 var paddleHeight = 100;
+var paddleWidth = 10;
+var player1Score = 0;
+var player2Score = 0;
 
 
 window.onload = function () {
     setInterval(function () {moveEverything(); drawEverything()}, 1000/FPS);
     canvas.addEventListener('mousemove', function() {var mousePos = calcMousePos(event); paddle1Y = mousePos.y - (paddleHeight/2)});
+
 }
 
 function drawEverything(){
@@ -278,18 +283,49 @@ function drawEverything(){
 
     colorCircle(ballX, ballY, 10, 'white');
 
-    colorRect(0, paddle1Y, 10, paddleHeight, 'white');
+    colorRect(0, paddle1Y, paddleWidth, paddleHeight, 'white');
+
+    colorRect(canvas.width - paddleWidth, paddle2Y, paddleWidth, paddleHeight, 'white');
+    canvasContext.fillText(player1Score, 100, 100);
+    canvasContext.fillText(player2Score, canvas.width-100, 100);
+}
+
+function computerMovement() {
+    var paddle2Center = paddle2Y + (paddleHeight/2);
+    if(paddle2Center < ballY - 35) {
+        paddle2Y += 6;
+    }
+    else if(paddle2Center > ballY + 35) {
+        paddle2Y -= 6;
+    }
 }
 
 function moveEverything() {
-    ballX = ballX + ballSpeedX;
+    computerMovement();
+
+    ballX += ballSpeedX;
+    ballY += ballSpeedY;
+
     if(ballX > canvas.width){
-        ballSpeedX = - ballSpeedX;
+        if(ballY > paddle2Y && ballY < (paddle2Y) + paddleHeight){
+            ballSpeedX = - ballSpeedX;
+        }
+        else {
+            ballReset()
+            player2Score++;
+        }
     }
     if(ballX < 0){
-        ballSpeedX = - ballSpeedX;
+        if(ballY > paddle1Y && ballY < (paddle1Y) + paddleHeight){
+            ballSpeedX = - ballSpeedX;
+        }
+        else {
+            ballReset()
+            player1Score++;
+        }
+
     }
-    ballY = ballY + ballSpeedY;
+
     if(ballY > canvas.height){
         ballSpeedY = - ballSpeedY;
     }
@@ -335,4 +371,9 @@ function calcMousePos() {
         x:mouseX,
         y:mouseY
     }
+}
+function ballReset() {
+    ballSpeedX = - ballSpeedX;
+    ballX = canvas.width/2;
+    ballY = canvas.height/2;
 }
