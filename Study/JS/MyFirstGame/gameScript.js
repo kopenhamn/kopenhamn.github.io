@@ -261,8 +261,8 @@ var canvas = document.getElementById('gameCanvas');
 var canvasContext = canvas.getContext('2d');
 var ballX = 50;
 var ballY = 50;
-var ballSpeedX = 15;
-var ballSpeedY = 5;
+var ballSpeedX = 20;
+var ballSpeedY = 10;
 var FPS = 30;
 var paddle1Y;
 var paddle2Y = 250;
@@ -307,9 +307,9 @@ function drawEverything() {
         canvasContext.fillStyle = 'white';
 
         if (player1Score >= winningScore) {
-            canvasContext.fillText("Left Player Won!!!", 350, 200);
-        } else if (player2Score >= winningScore) {
             canvasContext.fillText("Right Player Won!!!", 350, 200);
+        } else if (player2Score >= winningScore) {
+            canvasContext.fillText("Left Player Won!!!", 350, 200);
         }
         canvasContext.fillText("Click to continue", 350, 500);
         return;
@@ -330,9 +330,9 @@ function drawEverything() {
 function computerMovement() {
     var paddle2Center = paddle2Y + (paddleHeight / 2);
     if (paddle2Center < ballY - 35) {
-        paddle2Y += 6;
+        paddle2Y += 15;
     } else if (paddle2Center > ballY + 35) {
-        paddle2Y -= 6;
+        paddle2Y -= 15;
     }
 }
 
