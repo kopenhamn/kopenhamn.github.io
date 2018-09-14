@@ -1,3 +1,7 @@
+/*https://www.udemy.com/learn-html5-programming-from-scratch/learn/v4/t/lecture/247068?start=0
+I thought it ll be about HTML, but major part is JS =)
+*/
+
 function makeCanvas() {
 
 //canvas1
@@ -51,17 +55,50 @@ function makeCanvas() {
     cont3.fill();
 
 //canvas4
+
     var can4 = document.getElementById('canvas4');
     var cont4 = can4.getContext('2d');
+    var ballX = 50;
+    var ballY = 80;
+    var ballSpeedX = 10;
+    var ballSpeedY = 10;
+    var FPS = 30;
 
+
+function moveBalls() {
+    ballX += ballSpeedX;
+    ballY += ballSpeedY;
+
+    if (ballX > can4.width) {
+        ballSpeedX = -ballSpeedX;
+    }
+    if (ballX < 0) {
+        ballSpeedX = -ballSpeedX;
+    }
+    if (ballY > can4.height) {
+        ballSpeedY = -ballSpeedY;
+    }
+    if (ballY < 0) {
+        ballSpeedY = -ballSpeedY;
+    }
+}
+
+
+
+setInterval(function () {
+        drawBalls(), moveBalls()
+    }, 1000/FPS);
+
+function drawBalls(){
+
+    colorRect(0, 0, can4.width, can4.height, 'white');
     colorCircle(200, 150, 150, '#f3f0f6');
-    colorCircle(200, 100, 50, 'red');
-    colorCircle(200, 150, 60, 'yellow');
-    colorCircle(200, 200, 70, 'green');
-    colorCircle(210, 220, 70, 'blue');
-    colorCircle(150, 200, 80, 'white');
-    colorCircle(200, 220, 60, 'grey');
-
+    colorCircle(ballX, 100, 50, 'red');
+    colorCircle(ballY, ballX, 60, 'yellow');
+    colorCircle(50, ballY, 70, 'green');
+    colorCircle(ballY, 220, 70, 'blue');
+    colorCircle(ballX, ballY, 80, 'white');
+    colorCircle(ballX, 220, 60, 'grey');
 
     function colorCircle(w, h, r, c) {
         cont4.beginPath();
@@ -69,5 +106,11 @@ function makeCanvas() {
         cont4.arc(w, h, r, 0,Math.PI*2,true);
         cont4.fill();
     }
-
+    function colorRect(x, y, w, h, c) {
+        cont4.fillStyle = c;
+        cont4.fillRect(x, y, w, h);
+    }
 }
+}
+
+//Done!
