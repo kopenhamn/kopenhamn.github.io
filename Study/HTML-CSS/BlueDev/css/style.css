@@ -44,6 +44,10 @@
         margin: 0;
         padding: 0;
     }
+    header a {
+        text-decoration: none;
+        color: #ffffff;
+    }
     header h3 {
         color: rgb(76, 130, 214);
         margin: 0;
@@ -140,6 +144,71 @@
     section#contact {
         padding: 10px;
     }
+    .firstSec {
+        width: 400px;
+    }
+    .firstSec label {
+        float: left;
+    }
+    .firstSec input {
+        float: right;
+        width: 150px;
+        height: 17px;
+    }
+    .secondSec {
+        width: 400px;
+        border-radius: 5px;
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .secondSec .radio {
+        width: 200px;
+    }
+    .secondSec input {
+        height: 22px;
+        float: right;
+    }
+
+    /*Browse Devs*/
+    section#browse {
+        padding: 10px;
+    }
+
+    #browse .developer {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 10px;
+        background: rgba(74, 110, 171, 0.1);
+    }
+    #browse .developer div {
+        float: left;
+
+    }
+    #browse img {
+        float: right;
+        margin: 0;
+    }
+    /*About*/
+    section#about {
+        padding: 10px;
+    }
+
+    #about .developer {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    #about img {
+        float: right;
+        margin: 10px;
+
+    }
     h2 {
         padding-bottom:10px;
     }
@@ -170,7 +239,7 @@
         order: 6;
         text-align: center;
         width: 100%;
-        padding-top: 15px;
+        padding: 15px 0;
         background: rgba(74, 110, 171, 0.8);
     }
     form input {
@@ -210,6 +279,10 @@
     header h1 {
         float: left;
         padding: 10px 0 0 20px;
+    }
+    header a {
+        text-decoration: none;
+        color: #ffffff;
     }
     header h3 {
         float: right;
@@ -307,6 +380,74 @@
         width: 725px;
         padding: 10px;
         line-height: 1.5;
+    }
+    /*Contuct Us*/
+    section#contact {
+        padding: 10px;
+    }
+    .firstSec {
+        width: 400px;
+    }
+    .firstSec label {
+        float: left;
+    }
+    .firstSec input {
+        float: right;
+        width: 150px;
+        height: 17px;
+    }
+    .secondSec {
+        width: 400px;
+        border-radius: 5px;
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .secondSec .radio {
+        width: 200px;
+    }
+    .secondSec input {
+        height: 22px;
+        float: right;
+    }
+    /*Browse Devs*/
+    section#browse {
+        padding: 10px;
+    }
+
+    #browse .developer {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 10px;
+        background: rgba(74, 110, 171, 0.1);
+    }
+    #browse .developer div {
+        float: left;
+
+    }
+    #browse img {
+        float: right;
+        margin: 0;
+    }
+    /*About*/
+    section#about {
+        padding: 10px;
+    }
+
+    #about .developer {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    #about img {
+        float: right;
+        margin: 10px;
+
     }
     h2 {
         padding-bottom:10px;

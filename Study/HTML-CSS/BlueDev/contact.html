@@ -10,13 +10,13 @@
         <div id="container">
             <header>
                 <h1><span class="color-blue">Blue</span> Developer Directory</h1>
-                <h3>Find A Developer <span class="color-white">NOW</span></h3>
+                <h3>Find A Developer <span class="color-white"><a href="browseDev.html">NOW</a></span></h3>
             </header>
             <nav id="menu">
                 <ul>
                     <li class="item"><a href="index.html">Home</a></li>
-                    <li class="item"><a href="">About Us</a></li>
-                    <li class="item"><a href="">Browse Developers</a></li>
+                    <li class="item"><a href="about.html">About Us</a></li>
+                    <li class="item"><a href="browseDev.html">Browse Developers</a></li>
                     <li class="item"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -35,25 +35,38 @@
                 <h2>Contact Us</h2>
                 <form class="form1" action="contact.html">
                     <h3>Please use this form to contact a member of our website team</h3>
-                    <label for="name">Full Name:</label>
-                    <input type="text" name="name" placeholder="Enter Your Name" required><br>
-                    <label for="email" >Email Address:</label>
-                    <input type="email" name="email" placeholder="Enter Your Email" required><br>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" name="phone" placeholder="Enter Phone Number" required><br>
-                    <label for="radio">Best Time To Call:</label>
-                    <input type="radio" name="radio" checked> Morning <input type="radio" name="radio"> Noon <input type="radio" name="radio"> Evening <br>
-<!-- Doesnot work!-->
-                    <p>
+                    <div class="firstSec">
+                        <label for="name">Full Name:</label>
+                        <input type="text" name="name" placeholder="Enter Your Name" required><br>
+                        <label for="email" >Email Address:</label>
+                        <input type="email" name="email" placeholder="Enter Your Email" required><br>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" name="phone" placeholder="Enter Phone Number" required>
+                    </div><br>
+                    <div class="secondSec">
+                        <p>Best Time To Call:</p>
+                        <div class="radio">
+                            Morning
+                            <input type="radio" name="radio" checked> <br>
+                            Noon
+                            <input type="radio" name="radio"> <br>
+                            Evening
+                            <input type="radio" name="radio">
+                        </div>
+
+                    </div>
+
+<!-- Doesnot work in my Safari =()!-->
+                    <div class="firstSec">
                         <label for="location">Location:</label>
-                        <input list="location" id="location">
+                        <input list="location">
 
                         <datalist id="location">
                             <option value="Boston">
                             <option value="New York">
                             <option value="Miami">
                         </datalist>
-                    </p>
+                    </div> <br><br>
 
                     <fieldset>
                         <legend>About Your Project</legend>
@@ -67,28 +80,22 @@
                             <input type="range" name="budget" id="budget" min="500" max="10000" onchange="updateTextInput(this.value)">
                             <input type="text" id="textInput">
                         </p>
-                        <p>
+                        <p class="secondSec">
                             <label for="check">Services Needed. (Check all that apply):</label> <br>
-                            <input type="checkbox" name="chek"> HTML
-                            <input type="checkbox" name="chek"> PHP <br>
-                            <input type="checkbox" name="chek"> ASP
+                            <input type="checkbox" name="chek"> HTML<br>
+                            <input type="checkbox" name="chek"> PHP<br>
+                            <input type="checkbox" name="chek"> ASP<br>
                             <input type="checkbox" name="chek"> Java <br>
-                            <input type="checkbox" name="chek"> C++
+                            <input type="checkbox" name="chek"> C++<br>
                             <input type="checkbox" name="chek"> Design
                         </p>
-                        <p>
+                        <p class="firstSec">
                             <label for="website">Curren Website:</label>
-                            <input type="url" name="website">
-                        </p>
-                        <p>
+                            <input type="url" name="website"><br>
                             <label for="Date">Start Date:</label>
-                            <input type="date" name="Date">
-                        </p>
-                        <p>
+                            <input type="date" name="Date"><br>
                             <label for="Number">Number of Pages:</label>
-                            <input type="number" name="Number">
-                        </p>
-                        <p>
+                            <input type="number" name="Number"><br>
                             <label for="favcolor">Main Color of Site:</label>
                             <input type="color" name="favcolor">
                         </p>
