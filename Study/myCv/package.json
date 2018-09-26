@@ -6,7 +6,7 @@
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
-  "author": "MichaelFeninets",
+  "author": "Michael Feninets",
   "license": "MIT",
   "dependencies": {
     "node-sass": "^4.9.3"
