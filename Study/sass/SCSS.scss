@@ -1,0 +1,13 @@
+$color: blue;
+$urlSrc: url('https://background.com/bg/bestone.jpg');
+@mixin cssProperty($argOne, $argTwo) {
+    color: $argOne;
+    background: $argTwo;
+}
+
+html {
+    background: $color;
+}
+body {
+    @include cssProperty($color, $urlSrc);
+}
