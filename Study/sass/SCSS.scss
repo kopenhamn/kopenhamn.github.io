@@ -1,4 +1,4 @@
-$color: blue;
+/*$color: blue;
 $urlSrc: url('https://background.com/bg/bestone.jpg');
 @mixin cssProperty($argOne, $argTwo) {
     color: $argOne;
@@ -111,12 +111,6 @@ $len: length($headers);
 
 $index: 1;
 
-@while $index <= 6 {
-    #{ nth($headers, $index)} {
-        font-size: nth($fontSize, $index);
-    }
-    $index: $index +1;
-}
 
 // Function Directives
 
@@ -129,4 +123,23 @@ $index: 1;
     @else {@return 'Nope'}
 }
 
-section { width: list-match($headers, $fontSize);}
+section { width: list-match($headers, $fontSize);}*/
+
+// GRID by SASS
+
+#grid div {
+    height: 25px;
+    background: #ccc;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+    float: left;
+}
+
+$max: 16;
+
+@for $i from 1 through $max {
+    $equ: 100% / $i;
+    #grid.cell-#{ $i } > div {
+        width: $equ;
+    }
+}
