@@ -27,6 +27,31 @@ div {
   width: 12px;
   width: 10;
   width: 50.1;
-  width: 80;
+  width: 25;
   height: 0.5px;
   line-height: -34px; }
+
+.main {
+  content: 'Nope False!';
+  width: 0px; }
+
+h1 {
+  font-size: 55px; }
+
+h2 {
+  font-size: 45px; }
+
+h3 {
+  font-size: 40px; }
+
+h4 {
+  font-size: 35px; }
+
+h5 {
+  font-size: 30px; }
+
+h6 {
+  font-size: 25px; }
+
+section {
+  width: "Yup"; }
