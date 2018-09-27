@@ -10,4 +10,74 @@ html {
 }
 body {
     @include cssProperty($color, $urlSrc);
+    font-size: normal;
+}
+
+//list functions
+
+$list1: 200px;
+$list2: 1px 2px 3px black;
+$list3: Helvetica, Arial, sans-serif;
+
+$zip1: 1px 2px 3px 4px;
+$zip2: 4px 3px 2px 1px;
+$zip3: black green blue red;
+
+$NestedList: 1px 2px 3px green, 6px 7px 8px blue, 3px 2px 1px yellow;
+
+html {
+    background: index($list3, Arial);
+    background: zip($zip1, $zip2, $zip3);
+}
+
+//Maps
+
+$map1: (
+    "KeyName": "Value",
+    "AnotherKey": 200px
+);
+
+$map2: ( 'key1': 'value1', 'key2': 'value2','key3': 'value3');
+
+$map3: (
+    'KeyName'  : 'targeting a key produces its value',
+    'String'   : string,
+    'Number'   : 102,
+    'List'     : (background .2s, color .3s),
+    'NestedMap': (
+        'NestedKey': 'Nested value',
+        'url'      : '../images/nestedimg.png',
+        'Width'    : 300px
+    )
+);
+
+.foo{
+    content: map-keys($map1);
+    content: map-values($map1);
+    content: map-has-key($map1, 'KeyName');
+    content: map-get($map3, 'KeyName');
+    content: inspect(map-merge($map1, $map2));
+    content: inspect(map-remove($map2, 'key1', 'key2'));
+}
+
+//Math Operators and functions
+
+$a: 16px; $b: 32px; $c: 4.5px; $d: -12px;
+
+$eq: 4-(6+$b);
+
+div {
+    width: 5 + 10 + $a -$b * 2 / $c;
+    width: round(5 + 10 + $a - $b * 2 / $c);
+    width: floor(5 + 10 + $a - $b * 2 / $c);
+    width: cell(5 + 10 + $a - $b * 2 / $c - .4);
+    width: percentage(4.5);
+    width: abs($d);
+    width: min(10, 20, 50, 50.1, $a);
+    width: max(10, 20, 50, 50.1, $a);
+    width: random(100);
+    height: $b % $c;
+    line-height: $eq;
+
+
 }
