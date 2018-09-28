@@ -127,7 +127,7 @@ section { width: list-match($headers, $fontSize);}*/
 
 // GRID by SASS
 
-#grid div {
+#grid > div {
     height: 25px;
     background: #ccc;
     border: 1px solid #aaa;
@@ -139,7 +139,24 @@ $max: 16;
 
 @for $i from 1 through $max {
     $equ: 100% / $i;
-    #grid.cell-#{ $i } > div {
+    #grid.cell-#{$i} > div {
         width: $equ;
+    }
+}
+
+//Grid Media queries
+
+$map: (850:12, 550:6, 380:3);
+
+@each $key, $value in $map {
+
+    @media all and (max-width: $key + px){
+
+        @for $i from 1 through $value {
+            $equ: 100% / $i;
+            #grid.cell-#{$key}-#{$i} > div {
+                width: $equ;
+            }
+        }
     }
 }
