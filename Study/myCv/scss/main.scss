@@ -145,8 +145,48 @@ main {
         display: block;
         background: lighten($primary-color, 0.7);
         padding: 0.5rem;
-        margin: 10px 0;
+        margin: 20px 0;
         border-left: $secondary-color 5px solid;
+        .icontainer {
+            padding: 0;
+            a {
+                display: inline-block;
+                padding: 20px;
+                margin-bottom: 10px;
+                border: 1px solid grey;
+                border-radius: 10px;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+                }
+            }
+        }
+
+        .profiles {
+            padding: 0;
+
+            img {
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                width: 37px;
+            }
+
+            li{
+                border: 1px solid grey;
+                border-radius: 10px;
+                list-style: none;
+                text-align: center;
+                margin: 5px 0;
+                padding: 10px 0;
+
+                &:hover {
+                    cursor: pointer;
+                    background: lighten($primary-color, 5);
+                    @include easeOut();
+                }
+            }
+        }
     }
 }
 

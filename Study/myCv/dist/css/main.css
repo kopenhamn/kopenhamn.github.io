@@ -197,8 +197,36 @@ main {
     display: block;
     background: #464646;
     padding: 0.5rem;
-    margin: 10px 0;
+    margin: 20px 0;
     border-left: #eece1a 5px solid; }
+    .work-info .work-places .icontainer {
+      padding: 0; }
+      .work-info .work-places .icontainer a {
+        display: inline-block;
+        padding: 20px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 10px; }
+        .work-info .work-places .icontainer a:hover {
+          color: #eece1a;
+          transition: all 0.5s ease-out; }
+    .work-info .work-places .profiles {
+      padding: 0; }
+      .work-info .work-places .profiles img {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 37px; }
+      .work-info .work-places .profiles li {
+        border: 1px solid grey;
+        border-radius: 10px;
+        list-style: none;
+        text-align: center;
+        margin: 5px 0;
+        padding: 10px 0; }
+        .work-info .work-places .profiles li:hover {
+          cursor: pointer;
+          background: #515151;
+          transition: all 0.5s ease-out; }
 
 .boxes {
   display: flex;
