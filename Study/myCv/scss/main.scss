@@ -111,20 +111,42 @@ main {
 }
 
 // Work/projects
-.projects {
+.work-info {
     display: grid;
-    grid-gap: 0.7rem;
+    grid-gap: 30px;
+    grid-template-areas:
+    'myWork myWork myWork'
+    'skill1 skill2 skill3';
     grid-template-columns: repeat(3, 1fr);
 
-    img {
-        width: 100%;
-        border: 3px #fff solid;
+    .myWork {
+        grid-area: myWork;
+        font-size: 1.5rem;
+    }
 
-        &:hover {
-            opacity: 0.5;
-            border-color: $secondary-color;
-            @include easeOut;
-        }
+    .skill-1 {
+        grid-area: skill1;
+    }
+
+    .skill-2 {
+        grid-area: skill2;
+    }
+
+    .skill-3 {
+        grid-area: skill3;
+    }
+
+    .skill {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
+    .work-places {
+        display: block;
+        background: lighten($primary-color, 0.7);
+        padding: 0.5rem;
+        margin: 10px 0;
+        border-left: $secondary-color 5px solid;
     }
 }
 

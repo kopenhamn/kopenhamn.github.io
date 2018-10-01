@@ -175,17 +175,30 @@ main {
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
-.projects {
+.work-info {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 30px;
+  grid-template-areas: 'myWork myWork myWork' 'skill1 skill2 skill3';
   grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #eece1a;
-      transition: all 0.5s ease-out; }
+  .work-info .myWork {
+    grid-area: myWork;
+    font-size: 1.5rem; }
+  .work-info .skill-1 {
+    grid-area: skill1; }
+  .work-info .skill-2 {
+    grid-area: skill2; }
+  .work-info .skill-3 {
+    grid-area: skill3; }
+  .work-info .skill {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid; }
+  .work-info .work-places {
+    display: block;
+    background: #464646;
+    padding: 0.5rem;
+    margin: 10px 0;
+    border-left: #eece1a 5px solid; }
 
 .boxes {
   display: flex;
