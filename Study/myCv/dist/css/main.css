@@ -208,8 +208,13 @@ main {
         border: 1px solid grey;
         border-radius: 10px; }
         .work-info .work-places .icontainer a:hover {
+          cursor: default;
           color: #eece1a;
           transition: all 0.5s ease-out; }
+    .work-info .work-places .certs img {
+      width: 150px; }
+      .work-info .work-places .certs img:hover {
+        cursor: pointer; }
     .work-info .work-places .profiles {
       padding: 0; }
       .work-info .work-places .profiles img {

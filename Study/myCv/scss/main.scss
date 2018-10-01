@@ -156,10 +156,19 @@ main {
                 border: 1px solid grey;
                 border-radius: 10px;
 
-            &:hover {
-                color: $secondary-color;
-                @include easeOut();
+                &:hover {
+                    cursor: default;
+                    color: $secondary-color;
+                    @include easeOut();
                 }
+            }
+        }
+
+        .certs img {
+            width: 150px;
+
+            &:hover {
+                cursor: pointer;
             }
         }
 
