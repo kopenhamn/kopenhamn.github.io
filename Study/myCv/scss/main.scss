@@ -177,12 +177,14 @@ main {
                 border-radius: 10px;
                 list-style: none;
                 text-align: center;
-                margin: 5px 0;
-                padding: 10px 0;
+                margin: auto;
+                margin-bottom: 10px;
+                padding: 5px 0;
+                max-width: 450px;
 
                 &:hover {
+                    border: 1px solid $secondary-color;
                     cursor: pointer;
-                    background: lighten($primary-color, 5);
                     @include easeOut();
                 }
             }
