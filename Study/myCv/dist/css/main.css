@@ -214,17 +214,18 @@ main {
       padding: 0; }
       .work-info .work-places .profiles img {
         border-radius: 5px;
-        border: 1px solid #ccc;
-        width: 37px; }
+        width: 37px;
+        background: #fff; }
       .work-info .work-places .profiles li {
+        display: inline-block;
         border: 1px solid grey;
         border-radius: 10px;
         list-style: none;
         text-align: center;
-        margin: auto;
         margin-bottom: 10px;
-        padding: 5px 0;
-        max-width: 450px; }
+        padding: 10px 0;
+        width: 300px;
+        font-size: 15px; }
         .work-info .work-places .profiles li:hover {
           border: 1px solid #eece1a;
           cursor: pointer;
