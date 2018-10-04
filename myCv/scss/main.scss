@@ -166,6 +166,8 @@ main {
 
         .certs img {
             width: 150px;
+            border: 1px solid $secondary-color;
+            border-radius: 10px;
 
             &:hover {
                 cursor: pointer;
