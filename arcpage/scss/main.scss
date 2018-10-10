@@ -1,3 +1,4 @@
+@import 'config';
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +16,7 @@ body {
             right: 0;
             margin: 20px;
             z-index: 3;
+            @include easeOut;
 
             &:hover {
                 cursor: pointer;
@@ -29,6 +31,7 @@ body {
 
             &.close {
                 transform: rotate(180deg);
+                @include easeOut;
 
                 .btnLine {
 
@@ -47,16 +50,18 @@ body {
 
         //menu config
         .menu {
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             width: 30%;
             height: 100%;
             text-align: center;
             background: rgba(150, 146, 11, 0.5);
-            display: none;
+            display: flex;
             justify-content: center;
             flex-direction: column;
+            transform: translate3d(100%, 0, 0);
+            @include easeOut;
 
             ul {
                 list-style: none;
@@ -76,6 +81,8 @@ body {
 
             &.show {
                 display: flex;
+                transform: translate3d(0, 0, 0);
+                @include easeOut;
             }
         }
     }
@@ -85,12 +92,16 @@ body {
         display: flex;
         text-align: center;
         justify-content: center;
+        width: 100%;
+        @include easeOutLong;
+
         //reduce the width of main to figure with menu
         &.reduce {
-            width: 70%;
+            width: 65%;
+            @include easeOutLong;
         }
 
-        //logo config
+        //background config
         #bg {
             position: fixed;
             top: -50%;
@@ -125,13 +136,19 @@ body {
             background: rgba(150, 146, 11, 0.5);
             font-family: Tahoma, sans-serif;
             height: auto;
+            @include easeOutLong;
 
 
             h1 {
                 letter-spacing: 5px;
-                font-size: 90px;
+                font-size: 80px;
                 text-align: center;
                 margin-bottom: 5px;
+
+                span {
+                    color: rgb(47, 54, 19);
+                    font-size: 120px;
+                }
             }
 
             p {

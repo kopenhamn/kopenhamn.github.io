@@ -11,7 +11,8 @@ body header {
     top: 0;
     right: 0;
     margin: 20px;
-    z-index: 3; }
+    z-index: 3;
+    transition: all 0.5s ease-out; }
     body header .menu-btn:hover {
       cursor: pointer; }
     body header .menu-btn .btnLine {
@@ -20,7 +21,8 @@ body header {
       background: #fff;
       margin-bottom: 5px; }
     body header .menu-btn.close {
-      transform: rotate(180deg); }
+      transform: rotate(180deg);
+      transition: all 0.5s ease-out; }
       body header .menu-btn.close .btnLine:nth-child(1) {
         transform: rotate(45deg) translate(8px, 7px); }
       body header .menu-btn.close .btnLine:nth-child(2) {
@@ -28,16 +30,18 @@ body header {
       body header .menu-btn.close .btnLine:nth-child(3) {
         transform: rotate(-45deg) translate(4px, -3px); }
   body header .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 30%;
     height: 100%;
     text-align: center;
     background: rgba(150, 146, 11, 0.5);
-    display: none;
+    display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.5s ease-out; }
     body header .menu ul {
       list-style: none; }
       body header .menu ul li {
@@ -49,14 +53,19 @@ body header {
           color: #fff;
           letter-spacing: 1.5px; }
     body header .menu.show {
-      display: flex; }
+      display: flex;
+      transform: translate3d(0, 0, 0);
+      transition: all 0.5s ease-out; }
 
 body main {
   display: flex;
   text-align: center;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%;
+  transition: all 2s ease-out; }
   body main.reduce {
-    width: 70%; }
+    width: 65%;
+    transition: all 2s ease-out; }
   body main #bg {
     position: fixed;
     top: -50%;
@@ -85,12 +94,16 @@ body main {
     padding: 15px;
     background: rgba(150, 146, 11, 0.5);
     font-family: Tahoma, sans-serif;
-    height: auto; }
+    height: auto;
+    transition: all 2s ease-out; }
     body main .logo h1 {
       letter-spacing: 5px;
-      font-size: 90px;
+      font-size: 80px;
       text-align: center;
       margin-bottom: 5px; }
+      body main .logo h1 span {
+        color: #2f3613;
+        font-size: 120px; }
     body main .logo p {
       padding-left: 25px;
       border: 1px solid #fff;
