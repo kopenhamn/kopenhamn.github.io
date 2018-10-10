@@ -5,6 +5,7 @@
     font-family: Tahoma, sans-serif;
 }
 body {
+    background: $mainColor;
     header {
         display: flex;
         justify-content: center;
@@ -49,7 +50,7 @@ body {
             }
         }
 
-        //menu config
+        //menu config main
         .menu {
             position: fixed;
             top: 0;
@@ -57,12 +58,16 @@ body {
             width: 30%;
             height: 100%;
             text-align: center;
-            background: rgba(150, 146, 11, 0.5);
+            background: $secondColorA;
             display: flex;
             justify-content: center;
             flex-direction: column;
             transform: translate3d(100%, 0, 0);
             @include easeOut;
+
+            &.aboutNav{
+
+            }
 
             ul {
                 list-style: none;
@@ -76,6 +81,20 @@ body {
                         text-decoration: none;
                         color: #fff;
                         letter-spacing: 1.5px;
+
+                        &.current {
+                            color: $mainColor;
+                            @include easeOut;
+                            &:hover {
+                                color: #fff;
+                                @include easeOut;
+                            }
+                        }
+
+                        &:hover {
+                            color: $mainColor;
+                            @include easeOut;
+                        }
                     }
                 }
             }
@@ -90,78 +109,173 @@ body {
 
 
     main {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        width: 100%;
-        @include easeOutLong;
 
-        //reduce the width of main to figure with menu
-        &.reduce {
-            width: 65%;
-            @include easeOutLong;
-        }
 
-        //background config
-        #bg {
-            position: fixed;
-            top: -50%;
-            left: -50%;
+//////////////////MAIN PAGE CONFIG//////////////////
+        &#main {
+            display: flex;
+            text-align: center;
+            justify-content: center;
             width: 100%;
-            height: 100%;
-            z-index: -1;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                min-width: 50%;
-                min-height: 50%;
-                -webkit-filter: blur(1px);
-                -moz-filter: blur(1px);
-                -o-filter: blur(1px);
-                -ms-filter: blur(1px);
-                filter: blur(1px);
-            }
-        }
-
-        //LOGO config
-        .logo {
-            width: fit-content;
-            color: #fff;
-            margin-top: 30px;
-            padding: 15px ;
-            background: rgba(150, 146, 11, 0.5);
-            height: auto;
             @include easeOutLong;
 
+            //reduce the width of main to figure with menu
+            &.reduce {
+                width: 70%;
+                @include easeOutLong;
+            }
 
-            h1 {
-                letter-spacing: 5px;
-                font-size: 80px;
-                text-align: center;
-                margin-bottom: 5px;
+            //background config
+            #bgMain {
+                position: fixed;
+                top: -50%;
+                left: -50%;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
 
-                span {
-                    color: rgb(47, 54, 19);
-                    font-size: 120px;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    min-width: 100%;
+                    min-height: 100%;
+                    -webkit-filter: blur(1px);
+                    -moz-filter: blur(1px);
+                    -o-filter: blur(1px);
+                    -ms-filter: blur(1px);
+                    filter: blur(1px);
                 }
             }
 
-            p {
-                padding-left: 25px;
-                border: 1px solid #fff;
-                font-size: 17px;
-                letter-spacing: 24px;
+            //LOGO config
+            .logo {
+                width: fit-content;
+                color: #fff;
+                margin: 30px;
+                padding: 15px ;
+                background: $secondColorA;
+                height: auto;
+                @include easeOutLong;
+
+
+                h1 {
+                    letter-spacing: 5px;
+                    font-size: 80px;
+                    text-align: center;
+                    margin-bottom: 5px;
+
+                    span {
+                        color: $mainColor;
+                        font-size: 120px;
+                    }
+                }
+
+                p {
+                    padding-left: 25px;
+                    border: 1px solid #fff;
+                    font-size: 17px;
+                    letter-spacing: 24px;
+                }
             }
         }
-        nav {
 
 
+//////////////////ABOUT main CONFIG//////////////////
 
+        &#about {
+            margin: 0;
+            padding: 0;
+
+            //LOGO config
+            .topLogo {
+                .aboutLogo {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 60px;
+                    color: #fff;
+                    background: $secondColorA;
+                    @include easeOutLong;
+                    z-index: 1;
+                }
+
+                .moto {
+                    font-size: 20px;
+                    margin-top: 18px;
+                    text-align: center;
+                    z-index: 3;
+                    color: #fff;
+                    letter-spacing: 3px;
+                }
+
+                h1 {
+                    margin-left: 10px;
+                    letter-spacing: 3px;
+                    font-size: 30px;
+
+                    span {
+                        margin: 0;
+                        padding: 0;
+                        color: $mainColor;
+                        font-size: 35px;
+                    }
+                }
+
+                p {
+                    margin-left: 11px;
+                    font-size: 11px;
+                    letter-spacing: 7px;
+                }
+            }
+            section {
+                color: #fff;
+                margin-top: 20px;
+                line-height: 1.5;
+
+                h1 {
+                    font-size: 40px;
+                    padding: 30px 30px 10px 30px;
+                }
+
+                .bio {
+                    margin: 20px;
+
+                    img {
+                        border: 1px solid $secondColorA;
+                        border-radius: 10px;
+                        width: 400px;
+                        float: left;
+                        margin-right: 20px;
+                    }
+
+                    p {
+                        font-size: 16px;
+
+                    }
+                }
+
+                .team {
+                    border: 1px solid green;
+                    display: flex;
+                    flex-direction: row;
+                    .person {
+                        margin: 10px;
+
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            border: 1px solid $secondColorA;
+                            border-radius: 10px;
+                        }
+                    }
+                    margin: 50px 20px 20px 20px;
+                }
+            }
         }
     }
 }
