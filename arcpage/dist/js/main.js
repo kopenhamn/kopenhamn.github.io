@@ -3,6 +3,8 @@ let element = document.querySelectorAll('.btnLine');
 let menu = document.querySelectorAll('.menu');
 let header = document.querySelectorAll('header');
 let logo = document.querySelectorAll('.logo');
+let main = document.querySelectorAll('main');
+
 
 let showMenu = false;
 
@@ -14,6 +16,7 @@ function openMenu() {
         menu[0].classList.add('show');
         header[0].classList.add('reduce');
         logo[0].classList.add('reduce');
+        main[0].classList.add('reduce');
         /*
         for(x = 0; x < element.length; x++){
             element[x].classList.add('close');
@@ -30,6 +33,7 @@ function openMenu() {
         menu[0].classList.remove('show');
         header[0].classList.remove('reduce');
         logo[0].classList.remove('reduce');
+        main[0].classList.remove('reduce');
 
         /*for(x = 0; x < element.length; x++){
             element[x].classList.remove('close');

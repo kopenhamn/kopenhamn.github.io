@@ -6,7 +6,8 @@
     letter-spacing: 1.5px;
 }
 body {
-    //BACKGROUND for home page
+
+    //background for HOME page
     &.homeBody {
 
         background: url(../img/homeBg.jpg) no-repeat center center fixed;
@@ -14,23 +15,90 @@ body {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(#fff, 0.2);
+            z-index: -5;
+        }
     }
 
-    //BACKGROUND for about page
+    //background for ABOUT page
     &.about {
         background: url(../img/aboutBg.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            min-height: 100%;
+            background: rgba(#fff, 0.4);
+            z-index: -5;
+        }
     }
+
+    //background for PROJECTS page
+    &.projects {
+        background: url(../img/projectsBg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(#fff, 0.5);
+            z-index: -5;
+        }
+    }
+
+    //background for CONTACT page
+    &.contact {
+        background: url(../img/contactBg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(#fff, 0.5);
+            z-index: -5;
+        }
+    }
+
+
 
 ////////////////////////////////////////////////
 /////////////////// HEADER /////////////////////
 ////////////////////////////////////////////////
     header {
-        display: flex;
-        justify-content: center;
+        position: relative;
+        left: 0;
+
+        &.reduce {
+            .headLine {
+                width: 0%;
+                @include easeOut;
+            }
+        }
 
 //////////////////// LOGO /////////////////////
         .logo {
@@ -93,7 +161,8 @@ body {
             left: 0;
             width: 100%;
             height: 57px;
-            background: rgba($mainColor, 0.3);
+            background: rgba($mainColor, 0.2);
+            @include easeOut;
         }
 
 /////////////////// BUTTON ////////////////////
@@ -190,8 +259,12 @@ body {
                 @include easeOut;
             }
 
-//new UPPER navigation
+//workPages navigation
+
             &.about{
+                background: rgba($mainColor, 0.2);
+
+                /*
                 width: 100%;
                 height: 57px;
                 flex-direction: row;
@@ -225,6 +298,7 @@ body {
                         }
                     }
                 }
+                */
             }
         }
 
@@ -248,8 +322,17 @@ body {
 ///////////////////// MAIN /////////////////////
 ////////////////////////////////////////////////
     main {
+        position: relative;
         margin: 0;
         padding: 0;
+        left: 0;
+        @include easeOutLong;
+
+        //reduce the width of MAIN to figure with menu
+        &.reduce {
+            left: -30%;
+            @include easeOut;
+        }
 
         //ABOUTpage config
         &#aboutMain{
@@ -257,8 +340,6 @@ body {
                 box-sizing: border-box;
                 margin-top: 50px;
                 padding: 10px;
-                display: flex;
-                flex-direction: column;
                 width: 50%;
                 float: right;
                 color: #444;
@@ -281,6 +362,7 @@ body {
                         font-weight: normal;
                         width: fit-content;
                         border-bottom: 1px solid $secondColor;
+                        margin: 50px 0 20px 0;
 
                     }
 

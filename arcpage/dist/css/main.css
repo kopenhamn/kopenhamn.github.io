@@ -17,6 +17,14 @@ body.homeBody {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  body.homeBody .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -5; }
 
 body.about {
   background: url(../img/aboutBg.jpg) no-repeat center center fixed;
@@ -24,10 +32,51 @@ body.about {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  body.about .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: -5; }
+
+body.projects {
+  background: url(../img/projectsBg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  body.projects .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -5; }
+
+body.contact {
+  background: url(../img/contactBg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  body.contact .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -5; }
 
 body header {
-  display: flex;
-  justify-content: center; }
+  position: relative;
+  left: 0; }
+  body header.reduce .headLine {
+    width: 0%;
+    transition: all 0.5s ease-out; }
   body header .logo {
     width: 570px;
     height: auto;
@@ -69,7 +118,8 @@ body header {
     left: 0;
     width: 100%;
     height: 57px;
-    background: rgba(68, 68, 68, 0.3); }
+    background: rgba(68, 68, 68, 0.2);
+    transition: all 0.5s ease-out; }
   body header .menu-btn {
     display: block;
     position: fixed;
@@ -132,29 +182,42 @@ body header {
       transform: translate3d(0, 0, 0);
       transition: all 0.5s ease-out; }
     body header .menu.about {
-      width: 100%;
-      height: 57px;
-      flex-direction: row;
-      background: none;
-      justify-content: flex-end; }
-      body header .menu.about ul {
-        height: 57px;
-        margin-right: 50px; }
-        body header .menu.about ul li {
-          display: inline-block;
-          font-size: 25px;
-          margin: auto;
-          padding: 12px;
-          width: auto; }
-          body header .menu.about ul li a:hover {
-            color: #444;
-            transition: all 0.5s ease-out; }
-          body header .menu.about ul li a.current {
-            color: #444;
-            transition: all 0.5s ease-out; }
-            body header .menu.about ul li a.current:hover {
-              color: #fff;
-              transition: all 0.5s ease-out; }
+      background: rgba(68, 68, 68, 0.2);
+      /*
+                width: 100%;
+                height: 57px;
+                flex-direction: row;
+                background: none;
+                justify-content: flex-end;
+
+                ul {
+                    height: 57px;
+                    margin-right: 50px;
+                    li {
+                        display: inline-block;
+                        font-size: 25px;
+                        margin: auto;
+                        padding: 12px;
+                        width: auto;
+
+                        a {
+                            &:hover {
+                                color: $mainColor;
+                                @include easeOut;
+                            }
+
+                            &.current {
+                                color: $mainColor;
+                                @include easeOut;
+                                &:hover {
+                                    color: #fff;
+                                    @include easeOut;
+                                }
+                            }
+                        }
+                    }
+                }
+                */ }
   body header#homeHeader {
     display: flex;
     text-align: center;
@@ -166,14 +229,18 @@ body header {
       transition: all 2s ease-out; }
 
 body main {
+  position: relative;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  left: 0;
+  transition: all 2s ease-out; }
+  body main.reduce {
+    left: -30%;
+    transition: all 0.5s ease-out; }
   body main#aboutMain section {
     box-sizing: border-box;
     margin-top: 50px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
     width: 50%;
     float: right;
     color: #444;
@@ -188,7 +255,8 @@ body main {
     body main#aboutMain section .bio h2 {
       font-weight: normal;
       width: fit-content;
-      border-bottom: 1px solid #c8c800; }
+      border-bottom: 1px solid #c8c800;
+      margin: 50px 0 20px 0; }
     body main#aboutMain section .bio p {
       margin: 10px;
       font-size: 16px; }
