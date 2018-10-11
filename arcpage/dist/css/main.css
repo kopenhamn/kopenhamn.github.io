@@ -8,9 +8,10 @@ $secondColorA: rgba(150, 146, 11, 0.8);
 * {
   margin: 0;
   padding: 0;
-  font-family: Tahoma, sans-serif; }
+  font-family: Tahoma, sans-serif;
+  letter-spacing: 1.5px; }
 
-body.index {
+body.homeBody {
   background: url(../img/homeBg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -27,13 +28,48 @@ body.about {
 body header {
   display: flex;
   justify-content: center; }
+  body header .logo {
+    width: 570px;
+    height: auto;
+    color: #fff;
+    margin: 30px;
+    padding: 15px;
+    background: rgba(200, 200, 0, 0.5);
+    transition: all 2s ease-out; }
+    body header .logo h1 {
+      letter-spacing: 5px;
+      font-size: 95px;
+      text-align: center;
+      margin-bottom: 5px; }
+      body header .logo h1 span {
+        color: #444;
+        font-size: 110px; }
+    body header .logo p {
+      padding-left: 25px;
+      border: 1px solid #fff;
+      font-size: 17px;
+      letter-spacing: 24px; }
+  body header#aboutHeader .logo {
+    z-index: 2;
+    margin: 0;
+    position: fixed;
+    left: 50%;
+    margin-left: -86px;
+    transform: scale(0.3);
+    transform-origin: top left;
+    transition: none;
+    background: rgba(200, 200, 0, 0.5);
+    transition: all 2s ease-out; }
+    body header#aboutHeader .logo.reduce {
+      left: 0;
+      margin-left: 0; }
   body header .headLine {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 61px;
-    background: #444; }
+    height: 57px;
+    background: rgba(68, 68, 68, 0.3); }
   body header .menu-btn {
     display: block;
     position: fixed;
@@ -65,8 +101,10 @@ body header {
     width: 30%;
     height: 100%;
     text-align: center;
-    background: rgba(242, 236, 28, 0.3);
+    background: rgba(68, 68, 68, 0.2);
     display: flex;
+    font-weight: normal;
+    text-transform: uppercase;
     justify-content: center;
     flex-direction: column;
     transform: translate3d(100%, 0, 0);
@@ -75,7 +113,6 @@ body header {
       list-style: none; }
       body header .menu ul li {
         font-size: 40px;
-        font-weight: bold;
         padding: 15px; }
         body header .menu ul li a {
           text-decoration: none;
@@ -94,80 +131,64 @@ body header {
       display: flex;
       transform: translate3d(0, 0, 0);
       transition: all 0.5s ease-out; }
-
-body main .logo {
-  width: 570px;
-  height: auto;
-  color: #fff;
-  margin: 30px;
-  padding: 15px;
-  background: rgba(242, 236, 28, 0.3);
-  transition: all 2s ease-out; }
-  body main .logo h1 {
-    letter-spacing: 5px;
-    font-size: 95px;
+    body header .menu.about {
+      width: 100%;
+      height: 57px;
+      flex-direction: row;
+      background: none;
+      justify-content: flex-end; }
+      body header .menu.about ul {
+        height: 57px;
+        margin-right: 50px; }
+        body header .menu.about ul li {
+          display: inline-block;
+          font-size: 25px;
+          margin: auto;
+          padding: 12px;
+          width: auto; }
+          body header .menu.about ul li a:hover {
+            color: #444;
+            transition: all 0.5s ease-out; }
+          body header .menu.about ul li a.current {
+            color: #444;
+            transition: all 0.5s ease-out; }
+            body header .menu.about ul li a.current:hover {
+              color: #fff;
+              transition: all 0.5s ease-out; }
+  body header#homeHeader {
+    display: flex;
     text-align: center;
-    margin-bottom: 5px; }
-    body main .logo h1 span {
-      color: #444;
-      font-size: 110px; }
-  body main .logo p {
-    padding-left: 25px;
-    border: 1px solid #fff;
-    font-size: 17px;
-    letter-spacing: 24px; }
-
-body main#home {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  width: 100%;
-  transition: all 2s ease-out; }
-  body main#home.reduce {
-    width: 70%;
+    justify-content: center;
+    width: 100%;
     transition: all 2s ease-out; }
+    body header#homeHeader.reduce {
+      width: 70%;
+      transition: all 2s ease-out; }
 
-body main#about {
+body main {
   margin: 0;
   padding: 0; }
-  body main#about .logo {
-    margin: 0;
-    position: fixed;
-    left: 50%;
-    margin-left: -86px;
-    transform: scale(0.3);
-    transform-origin: top left;
-    transition: none;
-    background: rgba(242, 236, 28, 0.5); }
-  body main#about section {
-    border: 2px solid green;
+  body main#aboutMain section {
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
     width: 50%;
     float: right;
     color: #444;
-    margin-top: 20px;
     line-height: 1.5; }
-    body main#about section h1 {
-      font-size: 40px;
-      padding: 30px 30px 10px 30px; }
-    body main#about section .bio {
-      margin: 20px; }
-      body main#about section .bio img {
-        border: 1px solid rgba(242, 236, 28, 0.3);
-        border-radius: 10px;
-        width: 400px;
-        float: left;
-        margin-right: 20px; }
-      body main#about section .bio p {
-        font-size: 16px; }
-    body main#about section .team {
-      border: 1px solid green;
-      display: flex;
-      flex-direction: row;
-      margin: 50px 20px 20px 20px; }
-      body main#about section .team .person {
-        margin: 10px; }
-        body main#about section .team .person img {
-          width: 100px;
-          height: 100px;
-          border: 1px solid rgba(242, 236, 28, 0.3);
-          border-radius: 10px; }
+    body main#aboutMain section h1 {
+      font-weight: normal;
+      font-size: 60px;
+      margin-bottom: 50px;
+      letter-spacing: 5px; }
+      body main#aboutMain section h1 span {
+        color: #c8c800; }
+    body main#aboutMain section .bio h2 {
+      font-weight: normal;
+      width: fit-content;
+      border-bottom: 1px solid #c8c800; }
+    body main#aboutMain section .bio p {
+      margin: 10px;
+      font-size: 16px; }
