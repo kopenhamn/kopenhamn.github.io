@@ -38,7 +38,7 @@ body.about {
     right: 0;
     width: 100%;
     min-height: 100%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5);
     z-index: -5; }
 
 body.projects {
@@ -83,7 +83,7 @@ body header {
     color: #fff;
     margin: 30px;
     padding: 15px;
-    background: rgba(200, 200, 0, 0.5);
+    background: rgba(241, 221, 37, 0.5);
     transition: all 2s ease-out; }
     body header .logo h1 {
       letter-spacing: 5px;
@@ -107,7 +107,7 @@ body header {
     transform: scale(0.3);
     transform-origin: top left;
     transition: none;
-    background: rgba(200, 200, 0, 0.5);
+    background: rgba(241, 221, 37, 0.5);
     transition: all 2s ease-out; }
     body header#aboutHeader .logo.reduce {
       left: 0;
@@ -251,11 +251,11 @@ body main {
       margin-bottom: 50px;
       letter-spacing: 5px; }
       body main#aboutMain section h1 span {
-        color: #c8c800; }
+        color: #f1dd25; }
     body main#aboutMain section .bio h2 {
       font-weight: normal;
       width: fit-content;
-      border-bottom: 1px solid #c8c800;
+      border-bottom: 1px solid #f1dd25;
       margin: 50px 0 20px 0; }
     body main#aboutMain section .bio p {
       margin: 10px;
