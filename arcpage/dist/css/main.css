@@ -8,182 +8,195 @@ $secondColorA: rgba(150, 146, 11, 0.8);
 * {
   margin: 0;
   padding: 0;
-  font-family: Tahoma, sans-serif;
-  letter-spacing: 1.5px; }
+  font-family: Tahoma, helvetica, arial, sans-serif;
+  letter-spacing: 1.5px;
+  color: #444; }
 
-body.homeBody {
-  background: url(../img/homeBg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  body.homeBody .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: -5; }
+html {
+  height: 100%; }
 
-body.about {
-  background: url(../img/aboutBg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  body.about .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
+body {
+  height: 100%; }
+  body #container {
     min-height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: -5; }
-
-body.projects {
-  background: url(../img/projectsBg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  body.projects .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: -5; }
-
-body.contact {
-  background: url(../img/contactBg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  body.contact .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: -5; }
-
-body header {
-  position: relative;
-  left: 0; }
-  body header.reduce .headLine {
-    width: 0%;
-    transition: all 0.5s ease-out; }
-  body header .logo {
-    width: 570px;
-    height: auto;
-    color: #fff;
-    margin: 30px;
-    padding: 15px;
-    background: rgba(241, 221, 37, 0.5);
-    transition: all 2s ease-out; }
-    body header .logo h1 {
-      letter-spacing: 5px;
-      font-size: 95px;
-      text-align: center;
-      margin-bottom: 5px; }
-      body header .logo h1 span {
-        color: #444;
-        font-size: 110px; }
-    body header .logo p {
-      padding-left: 25px;
-      border: 1px solid #fff;
-      font-size: 17px;
-      letter-spacing: 24px; }
-  body header#aboutHeader .logo {
-    z-index: 2;
-    margin: 0;
-    position: fixed;
-    left: 50%;
-    margin-left: -86px;
-    transform: scale(0.3);
-    transform-origin: top left;
-    transition: none;
-    background: rgba(241, 221, 37, 0.5);
-    transition: all 2s ease-out; }
-    body header#aboutHeader .logo.reduce {
+    position: relative; }
+  body .bold {
+    font-weight: bold; }
+  body .mainColLight {
+    color: #666; }
+  body.homeBody {
+    background: url(../img/homeBg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    body.homeBody .overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      z-index: -5; }
+  body.about {
+    background: url(../img/aboutBg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    body.about .overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      min-height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: -5; }
+  body.projects {
+    background: url(../img/projectsBg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    body.projects .overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: -5; }
+  body.contact {
+    background: url(../img/contactBg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    body.contact .overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: -5; }
+  body header {
+    position: relative;
+    left: 0; }
+    body header.reduce .headLine {
+      width: 0%;
+      transition: all 0.5s ease-out; }
+    body header .logo {
+      width: 570px;
+      height: auto;
+      color: #fff;
+      margin: 30px;
+      padding: 15px;
+      background: rgba(241, 221, 37, 0.5);
+      transition: all 2s ease-out; }
+      body header .logo a {
+        text-decoration: none; }
+        body header .logo a h1 {
+          letter-spacing: 5px;
+          font-size: 95px;
+          text-align: center;
+          margin-bottom: 5px;
+          color: #fff; }
+          body header .logo a h1 span {
+            font-size: 110px; }
+        body header .logo a p {
+          padding-left: 25px;
+          border: 1px solid #fff;
+          font-size: 17px;
+          letter-spacing: 24px;
+          color: #fff; }
+    body header#aboutHeader .logo {
+      z-index: 3;
+      margin: 0;
+      position: fixed;
+      left: 50%;
+      margin-left: -86px;
+      transform: scale(0.3);
+      transform-origin: top left;
+      transition: none;
+      background: rgba(241, 221, 37, 0.5);
+      transition: all 2s ease-out; }
+      body header#aboutHeader .logo.reduce {
+        left: 0;
+        margin-left: 0; }
+    body header .headLine {
+      position: fixed;
+      top: 0;
       left: 0;
-      margin-left: 0; }
-  body header .headLine {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 57px;
-    background: rgba(68, 68, 68, 0.2);
-    transition: all 0.5s ease-out; }
-  body header .menu-btn {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 20px;
-    z-index: 3;
-    transition: all 0.5s ease-out; }
-    body header .menu-btn:hover {
-      cursor: pointer; }
-    body header .menu-btn .btnLine {
-      width: 35px;
-      height: 3px;
-      background: #fff;
-      margin-bottom: 5px; }
-    body header .menu-btn.close {
-      transform: rotate(180deg);
-      transition: all 0.5s ease-out; }
-      body header .menu-btn.close .btnLine:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 7px); }
-      body header .menu-btn.close .btnLine:nth-child(2) {
-        visibility: hidden; }
-      body header .menu-btn.close .btnLine:nth-child(3) {
-        transform: rotate(-45deg) translate(4px, -3px); }
-  body header .menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 100%;
-    text-align: center;
-    background: rgba(68, 68, 68, 0.2);
-    display: flex;
-    font-weight: normal;
-    text-transform: uppercase;
-    justify-content: center;
-    flex-direction: column;
-    transform: translate3d(100%, 0, 0);
-    transition: all 0.5s ease-out; }
-    body header .menu ul {
-      list-style: none; }
-      body header .menu ul li {
-        font-size: 40px;
-        padding: 15px; }
-        body header .menu ul li a {
-          text-decoration: none;
-          color: #fff;
-          letter-spacing: 1.5px; }
-          body header .menu ul li a.current {
-            color: #444;
-            transition: all 0.5s ease-out; }
-            body header .menu ul li a.current:hover {
-              color: #fff;
-              transition: all 0.5s ease-out; }
-          body header .menu ul li a:hover {
-            color: #444;
-            transition: all 0.5s ease-out; }
-    body header .menu.show {
-      display: flex;
-      transform: translate3d(0, 0, 0);
-      transition: all 0.5s ease-out; }
-    body header .menu.about {
+      width: 100%;
+      height: 57px;
       background: rgba(68, 68, 68, 0.2);
-      /*
+      transition: all 0.5s ease-out;
+      z-index: 2; }
+    body header .menu-btn {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin: 20px;
+      z-index: 3;
+      transition: all 0.5s ease-out; }
+      body header .menu-btn:hover {
+        cursor: pointer; }
+      body header .menu-btn .btnLine {
+        width: 35px;
+        height: 3px;
+        background: #fff;
+        margin-bottom: 5px; }
+      body header .menu-btn.close {
+        transform: rotate(180deg);
+        transition: all 0.5s ease-out; }
+        body header .menu-btn.close .btnLine:nth-child(1) {
+          transform: rotate(45deg) translate(8px, 7px); }
+        body header .menu-btn.close .btnLine:nth-child(2) {
+          visibility: hidden; }
+        body header .menu-btn.close .btnLine:nth-child(3) {
+          transform: rotate(-45deg) translate(4px, -3px); }
+    body header .menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 30%;
+      height: 100%;
+      text-align: center;
+      background: rgba(68, 68, 68, 0.2);
+      display: flex;
+      font-weight: normal;
+      text-transform: uppercase;
+      justify-content: center;
+      flex-direction: column;
+      transform: translate3d(100%, 0, 0);
+      transition: all 0.5s ease-out; }
+      body header .menu ul {
+        list-style: none; }
+        body header .menu ul li {
+          font-size: 40px;
+          padding: 15px; }
+          body header .menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 1.5px; }
+            body header .menu ul li a.current {
+              color: #444;
+              transition: all 0.5s ease-out; }
+              body header .menu ul li a.current:hover {
+                color: #fff;
+                transition: all 0.5s ease-out; }
+            body header .menu ul li a:hover {
+              color: #444;
+              transition: all 0.5s ease-out; }
+      body header .menu.show {
+        display: flex;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.5s ease-out; }
+      body header .menu.about {
+        background: rgba(68, 68, 68, 0.2);
+        /*
                 width: 100%;
                 height: 57px;
                 flex-direction: row;
@@ -218,45 +231,103 @@ body header {
                     }
                 }
                 */ }
-  body header#homeHeader {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    transition: all 2s ease-out; }
-    body header#homeHeader.reduce {
-      width: 70%;
+    body header#homeHeader {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
       transition: all 2s ease-out; }
-
-body main {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  transition: all 2s ease-out; }
-  body main.reduce {
-    left: -30%;
-    transition: all 0.5s ease-out; }
-  body main#aboutMain section {
+      body header#homeHeader.reduce {
+        width: 70%;
+        transition: all 2s ease-out; }
+  body main {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    transition: all 2s ease-out; }
+    body main.reduce {
+      left: -30%;
+      transition: all 0.5s ease-out; }
+    body main section {
+      box-sizing: border-box;
+      margin-top: 50px;
+      padding: 10px;
+      width: 50%;
+      float: right;
+      line-height: 1.5; }
+      body main section h1 {
+        font-weight: normal;
+        font-size: 60px;
+        margin-bottom: 50px;
+        letter-spacing: 5px; }
+        body main section h1 span {
+          color: #f1dd25; }
+      body main section .bio h2 {
+        font-weight: normal;
+        border-bottom: 1px solid #f1dd25;
+        margin: 50px 0 20px 0; }
+      body main section .bio p {
+        margin: 10px;
+        font-size: 16px; }
+    body main .pusher {
+      width: 100%;
+      height: 50px;
+      clear: both; }
+    body main .projects {
+      box-sizing: border-box;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      body main .projects .myProject {
+        width: 310px;
+        height: 230px;
+        background: url("../img/proOverlay.jpg");
+        background-size: cover;
+        position: relative;
+        margin: 20px; }
+        body main .projects .myProject img {
+          width: 310px;
+          height: 230px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 1;
+          z-index: 1;
+          transition: all 0.5s ease-out; }
+          body main .projects .myProject img:hover {
+            opacity: 0;
+            transition: all 0.5s ease-out; }
+        body main .projects .myProject p {
+          position: absolute;
+          bottom: 8px;
+          left: 16px; }
+    body main .contactInfo {
+      box-sizing: border-box;
+      position: absolute;
+      top: 200px;
+      width: 100%;
+      letter-spacing: 1.5px;
+      line-height: 30px;
+      padding: 0 5%; }
+      body main .contactInfo .address {
+        border-top: 1px solid #444;
+        float: left;
+        width: 48%; }
+        body main .contactInfo .address a {
+          text-decoration: none; }
+      body main .contactInfo .mailList {
+        border-top: 1px solid #444;
+        float: right;
+        width: 48%; }
+  body footer {
     box-sizing: border-box;
-    margin-top: 50px;
-    padding: 10px;
-    width: 50%;
-    float: right;
-    color: #444;
-    line-height: 1.5; }
-    body main#aboutMain section h1 {
-      font-weight: normal;
-      font-size: 60px;
-      margin-bottom: 50px;
-      letter-spacing: 5px; }
-      body main#aboutMain section h1 span {
-        color: #f1dd25; }
-    body main#aboutMain section .bio h2 {
-      font-weight: normal;
-      width: fit-content;
-      border-bottom: 1px solid #f1dd25;
-      margin: 50px 0 20px 0; }
-    body main#aboutMain section .bio p {
-      margin: 10px;
-      font-size: 16px; }
+    background-color: rgba(68, 68, 68, 0.1);
+    width: 100%;
+    text-align: right;
+    padding: 5px 6%;
+    position: absolute;
+    bottom: 0; }
