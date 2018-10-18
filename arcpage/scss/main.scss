@@ -459,6 +459,10 @@ body {
                 border-top: 1px solid $mainColor;
                 float: right;
                 width: 48%;
+
+                a {
+                    text-decoration: none;
+                }
             }
         }
     }

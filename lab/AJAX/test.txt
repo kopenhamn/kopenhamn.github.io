@@ -1,0 +1,3 @@
+This text has been got by AJAX XMLHTTPRequest
+
+So it works!
