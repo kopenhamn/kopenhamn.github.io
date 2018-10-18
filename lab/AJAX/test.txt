@@ -1,3 +1,4 @@
-This text has been got by AJAX XMLHTTPRequest
-
-So it works!
+THIS TEXT
+is here
+by USING
+AJAX request
