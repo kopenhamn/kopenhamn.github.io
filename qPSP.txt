@@ -1,0 +1,28 @@
+PSProject 
+
+https://kopenhamn.github.io/arcpage/dist/index.html
+
+
+1) Home Page ( https://kopenhamn.github.io/arcpage/dist/index.html ):
+
+- Цвет и оформление логотипа;
+- ...;
+
+2) About Page ( https://kopenhamn.github.io/arcpage/dist/about.html ):
+
+- Нужен текст по теме образования, существования, целей и возможностей компании (2-3 параграфа);
+- Нужно ли добавлять на эту страницу фото и минимальное инфо по сотрудникам? Если да, то нид фотки и инфо о занимаемой должности (возможно личные моб номера и мейлы);
+- ...;
+
+3) Projects Page ( https://kopenhamn.github.io/arcpage/dist/projects.html ):
+
+- нужна информация по оьектам, может не по всем, самые интересные, желательно с описанием и фотками;
+
+
+4) Contact Page ( https://kopenhamn.github.io/arcpage/dist/contact.html ):
+
+- нид актуальные реквизиты;
+
+
+
+- Свои пожелания и предложения =)

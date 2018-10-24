@@ -1,0 +1,96 @@
+$mainColor: #444;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Tahoma, sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    color: $mainColor;
+
+    #wrapper {
+        position: absolute;
+        width: 260px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border: 1px solid red;
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            border: 1px solid green;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-content: center;
+
+            .M {
+                position: relative;
+            }
+
+            .I {
+                position: relative;
+                top: 17px;
+                width: 15px;
+                height: 75px;
+                margin-right: 2px;
+
+
+                &.first {
+                    margin-right: 7px;
+
+                    .tItem {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 15px;
+                        height: 15px;
+                        margin-bottom: 3px;
+                        background: $mainColor;
+                        transition: all 2s ease;
+                    }
+
+                    .bItem {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 15px;
+                        height: 54px;
+                        background: $mainColor;
+                        transition: all 1s ease;
+                    }
+                }
+
+                &.second {
+
+                    .tItem {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 15px;
+                        height: 15px;
+                        background: $mainColor;
+                        transition: all 4s ease;
+                    }
+
+                    .bItem {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        width: 15px;
+                        height: 54px;
+                        background: $mainColor;
+                        transition: all 2s ease;
+                    }
+                }
+            }
+
+            .O {
+                position: relative;
+            }
+        }
+    }
+}
