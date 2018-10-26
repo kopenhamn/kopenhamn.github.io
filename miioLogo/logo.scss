@@ -10,7 +10,7 @@ body {
     font-size: 100px;
     font-weight: bold;
     color: $mainColor;
-    background: rgb(209, 222, 219);
+    background: #ecf0f1;
 
     #wrapper {
         box-sizing: border-box;
@@ -19,9 +19,9 @@ body {
         height: 110px;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, -50%);
         border: 1px solid $mainColor;
-        box-shadow: 20px 20px 20px 0px rgba(0,0,0,0.5);
+        box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
         background: rgba(#fff, 0.8);
 
         .logo {
@@ -32,6 +32,11 @@ body {
             flex-direction: row;
             position: relative;
             justify-content: center;
+
+            &second {
+                background: #000;
+                color: #fff;
+            }
 
             .M {
                 position: relative;
@@ -56,7 +61,7 @@ body {
                         height: 15px;
                         margin-bottom: 3px;
                         background: $mainColor;
-                        transition: all 2s ease;
+                        transition: all 0.8s ease;
                     }
 
                     .bItem {
@@ -66,7 +71,7 @@ body {
                         width: 15px;
                         height: 54px;
                         background: $mainColor;
-                        transition: all 1s ease;
+                        transition: all 0.1s ease;
                     }
                 }
 
@@ -79,7 +84,7 @@ body {
                         width: 15px;
                         height: 15px;
                         background: $mainColor;
-                        transition: all 4s ease;
+                        transition: all 1s ease;
                     }
 
                     .bItem {
@@ -89,7 +94,7 @@ body {
                         width: 15px;
                         height: 54px;
                         background: $mainColor;
-                        transition: all 2s ease;
+                        transition: all 0.3s ease;
                     }
                 }
             }

@@ -15,10 +15,75 @@ let iSecondBottom = i[1].lastElementChild.style;
 //let itemMarginBottom =
 
 window.onload = function() {
-    iFirstBottom.height="54px";
-    iSecondBottom.height="54px";
 
-    setInterval(logoAnim, 3000);
+
+    setInterval(function(){
+        iFirstTop.transition = "all 5s ease";
+        iFirstBottom.transition = "all 4s ease";
+        iSecondTop.transition = "all 9s ease";
+        iSecondBottom.transition = "all 7s ease";
+
+        setTimeout(
+            function(){
+                setTimeout(function logoAnim() {
+                    iFirstTop.top = 20 + 'px';
+                    iFirstBottom.height = 15 + 'px';
+                    iSecondTop.top = 20 + 'px';
+                    iSecondBottom.height = 15 + 'px';
+                },100)
+            },
+        100);
+
+        setTimeout(
+            function(){
+                iFirstTop.transition = "all 0.8s ease";
+                iSecondTop.transition = "all 1s ease";
+                iFirstBottom.transition = "all 0.1s ease";
+                iSecondBottom.transition = "all 0.3s ease";
+
+                setTimeout(function logoAnim() {
+                    iFirstTop.top = 0 + 'px';
+                    iFirstBottom.height = 54 + 'px';
+                    iSecondTop.top = 0 + 'px';
+                    iSecondBottom.height = 54 + 'px';
+                },100);
+
+                setTimeout(function logoAnim() {
+                    iFirstTop.top = 20 + 'px';
+                    iFirstBottom.height = 0 + 'px';
+                    iSecondTop.top = 20 + 'px';
+                    iSecondBottom.height = 0 + 'px';
+                },300);
+
+                setTimeout(function logoAnim() {
+                    iFirstTop.transition = "all 0.2s ease";
+                    iSecondTop.transition = "all 0.3s ease";
+                },400);
+
+                setTimeout(function logoAnim() {
+                    iFirstTop.top = -10 + 'px';
+                    iFirstBottom.height = 54 + 'px';
+                    iSecondTop.top = -10 + 'px';
+                    iSecondBottom.height = 54 + 'px';
+                },500);
+
+                setTimeout(function logoAnim() {
+                    iFirstTop.top = 0 + 'px';
+                    iSecondTop.top = 0 + 'px';
+                },700);
+            },
+        2890);
+    }, 4000);
+}
+
+/*
+transition: all 0.8s ease;
+transition: all 0.1s ease;
+transition: all 1s ease;
+transition: all 0.3s ease;
+
+
+    /* setInterval(logoAnim, 3000);
 
     let mod;
 
@@ -48,5 +113,4 @@ window.onload = function() {
             let x = Math.round(Math.random()*100/5);
             return x;
         }
-    }
-}
+    }*/
