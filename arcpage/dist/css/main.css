@@ -263,13 +263,49 @@ body {
         letter-spacing: 5px; }
         body main section h1 span {
           color: #f1dd25; }
-      body main section .bio h2 {
+      body main section h2 {
         font-weight: normal;
         border-bottom: 1px solid #f1dd25;
         margin: 50px 0 20px 0; }
       body main section .bio p {
         margin: 10px;
         font-size: 16px; }
+      body main section .staf .wrapper {
+        box-sizing: border-box;
+        letter-spacing: 1.5px;
+        line-height: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; }
+        body main section .staf .wrapper .team-member {
+          position: relative;
+          margin: 5px;
+          text-align: center;
+          font-size: 16px; }
+          body main section .staf .wrapper .team-member p {
+            background: #444;
+            color: #fff; }
+          body main section .staf .wrapper .team-member img {
+            width: 200px; }
+          body main section .staf .wrapper .team-member p.mailMe {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            padding-top: 120px;
+            text-align: center;
+            transition: all 0.5s ease-out; }
+            body main section .staf .wrapper .team-member p.mailMe:hover {
+              opacity: 0.7;
+              background: #444;
+              color: #fff;
+              transition: all 0.5s ease-out;
+              text-align: center;
+              border: 1px solid green; }
     body main .pusher {
       width: 100%;
       height: 50px;
