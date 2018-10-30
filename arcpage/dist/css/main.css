@@ -18,68 +18,75 @@ html {
 body {
   height: 100%; }
   body #container {
+    box-sizing: border-box;
+    border: 1px solid transparent;
     min-height: 100%;
+    box-sizing: border-box;
     position: relative; }
   body .bold {
     font-weight: bold; }
   body .mainColLight {
     color: #666; }
-  body.homeBody {
-    background: url(../img/homeBg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    body.homeBody .overlay {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.2);
-      z-index: -5; }
-  body.about {
-    background: url(../img/aboutBg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    body.about .overlay {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      min-height: 100%;
-      background: rgba(255, 255, 255, 0.5);
-      z-index: -5; }
-  body.projects {
-    background: url(../img/projectsBg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    body.projects .overlay {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.5);
-      z-index: -5; }
-  body.contact {
-    background: url(../img/contactBg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    body.contact .overlay {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.5);
-      z-index: -5; }
+  body.homeBody #homeBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  body.homeBody .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 0; }
+  body.about #aboutBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  body.about .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 0; }
+  body.projects #projectsBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  body.projects .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 0; }
+  body.contact #contactBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  body.contact .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 0; }
   body header {
     position: relative;
     left: 0; }
@@ -119,15 +126,13 @@ body {
       position: fixed;
       top: 0;
       left: 50%;
-      margin-left: -86px;
-      transform: scale(0.3);
+      transform: scale(0.3) translateX(-50%);
       transform-origin: top left;
-      transition: none;
       background: rgba(241, 221, 37, 0.5);
       transition: all 2s ease-out; }
       body header#aboutHeader .logo.reduce {
         left: 0;
-        margin-left: 0; }
+        transform: scale(0.3) translateX(0); }
     body header .headLine {
       position: fixed;
       top: 0;
@@ -342,12 +347,16 @@ body {
     width: 100%; }
     body header#homeHeader.reduce .logo {
       transform: scale(0.6);
-      transition: none;
       transition: all 2s ease-out; }
   body header#homeHeader .logo {
+    max-width: 100vw;
     transform: scale(0.8);
-    transition: none;
     transition: all 2s ease-out; }
+  body header#aboutHeader .logo.reduce {
+    transform: scale(0.3) translateX(0);
+    left: 50%;
+    top: 10%;
+    transform: scale(0.6) translateX(-50%); }
   body header .menu {
     width: 100%; }
   body main.reduce {
