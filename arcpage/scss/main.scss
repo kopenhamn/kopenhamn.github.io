@@ -9,6 +9,7 @@
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
 
@@ -103,9 +104,9 @@ body {
 
 
 
-////////////////////////////////////////////////
-/////////////////// HEADER /////////////////////
-////////////////////////////////////////////////
+    ////////////////////////////////////////////////
+    /////////////////// HEADER /////////////////////
+    ////////////////////////////////////////////////
     header {
         position: relative;
         left: 0;
@@ -117,10 +118,11 @@ body {
             }
         }
 
-//////////////////// LOGO /////////////////////
+        //////////////////// LOGO /////////////////////
         .logo {
-            width: 570px;
-            height: auto;
+            position: relative;
+            min-width: 570px;
+            height: 160px;
             color: #fff;
             margin: 30px;
             padding: 15px ;
@@ -143,6 +145,8 @@ body {
                 }
 
                 p {
+                    position: absolute;
+                    bottom: 10px;
                     padding-left: 25px;
                     border: 1px solid #fff;
                     font-size: 17px;
@@ -153,14 +157,14 @@ body {
 
         }
 
-///////////////// LOGO reduced ////////////////
+        ///////////////// LOGO reduced ////////////////
         &#aboutHeader {
             .logo {
                 z-index: 3;
                 margin: 0;
                 position: fixed;
+                top: 0;
                 left: 50%;
-                //width of origin logo is 570px, so if scale reduces width, to center the logo we have to set left margin to negative = originWidth * scale / 2
                 margin-left: -86px;
                 transform: scale(0.3);
                 transform-origin: top left;
@@ -176,7 +180,7 @@ body {
             }
         }
 
-////////////// fixed TOP FIELD ////////////////
+    ////////////// fixed TOP FIELD ////////////////
         .headLine {
             position: fixed;
             top: 0;
@@ -188,7 +192,7 @@ body {
             z-index: 2;
         }
 
-/////////////////// BUTTON ////////////////////
+    /////////////////// BUTTON ////////////////////
         .menu-btn {
             display: block;
             position: fixed;
@@ -228,13 +232,14 @@ body {
             }
         }
 
-////////////// NAVIGATION menu ////////////////
+    ////////////// NAVIGATION menu ////////////////
 
-//global menu conf
+    //global menu conf
         .menu {
             position: fixed;
             top: 0;
             right: 0;
+            min-width: 280px;
             width: 30%;
             height: 100%;
             text-align: center;
@@ -245,6 +250,7 @@ body {
             justify-content: center;
             flex-direction: column;
             transform: translate3d(100%, 0, 0);
+            z-index: 2;
             @include easeOut;
 
             ul {
@@ -282,47 +288,7 @@ body {
                 @include easeOut;
             }
 
-//workPages navigation
-
-            &.about{
-                background: rgba($mainColor, 0.2);
-
-                /*
-                width: 100%;
-                height: 57px;
-                flex-direction: row;
-                background: none;
-                justify-content: flex-end;
-
-                ul {
-                    height: 57px;
-                    margin-right: 50px;
-                    li {
-                        display: inline-block;
-                        font-size: 25px;
-                        margin: auto;
-                        padding: 12px;
-                        width: auto;
-
-                        a {
-                            &:hover {
-                                color: $mainColor;
-                                @include easeOut;
-                            }
-
-                            &.current {
-                                color: $mainColor;
-                                @include easeOut;
-                                &:hover {
-                                    color: #fff;
-                                    @include easeOut;
-                                }
-                            }
-                        }
-                    }
-                }
-                */
-            }
+    //workPages navigation
         }
 
         //reduces width of Header when showMenu to move homeLOGO left
@@ -341,9 +307,9 @@ body {
         }
     }
 
-////////////////////////////////////////////////
-///////////////////// MAIN /////////////////////
-////////////////////////////////////////////////
+    ////////////////////////////////////////////////
+    ///////////////////// MAIN /////////////////////
+    ////////////////////////////////////////////////
     main {
         position: relative;
         margin: 0;
@@ -357,23 +323,22 @@ body {
             @include easeOut;
         }
 
+        h1 {
+            text-align: right;
+            margin-top: 80px;
+            font-weight: normal;
+            font-size: 60px;
+            letter-spacing: 5px;
+            span {
+                color: $secondColor;
+            }
+        }
+
         section {
             box-sizing: border-box;
-            margin-top: 50px;
-            padding: 10px;
             width: 50%;
             float: right;
             line-height: 1.5;
-
-            h1 {
-                font-weight: normal;
-                font-size: 60px;
-                margin-bottom: 50px;
-                letter-spacing: 5px;
-                span {
-                    color: $secondColor;
-                }
-            }
 
             h2 {
                 font-weight: normal;
@@ -397,7 +362,7 @@ body {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    justify-content: space-around;
+                    justify-content: center;
 
                     .team-member {
                         position: relative;
@@ -414,46 +379,39 @@ body {
                             width: 200px;
                         }
 
-                        p.mailMe {
+                        .mailMe {
                             box-sizing: border-box;
-                            width: 100%;
-                            height: 100%;
                             position: absolute;
+                            width: 200px;
+                            height: 200px;
                             top: 0;
                             left: 0;
+                            padding-top: 85px;
                             opacity: 0;
-                            padding-top: 120px;
-                            text-align: center;
                             @include easeOut;
 
                             &:hover {
-                                opacity: 0.7;
+                                opacity: 0.8;
                                 background: $mainColor;
                                 color: #fff;
                                 @include easeOut;
                                 text-align: center;
-                                border: 1px solid green;
                             }
                         }
                     }
                 }
             }
         }
-        //div to push the footer bottom
-        .pusher {
-            width: 100%;
-            height: 50px;
-            clear: both;
-        }
+
         //projectPage config
         .projects {
             box-sizing: border-box;
-            width: 90%;
+            width: 100%;
             margin: auto;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
 
             .myProject {
                 width: 310px;
@@ -488,8 +446,9 @@ body {
         }
         .contactInfo {
             box-sizing: border-box;
-            position: absolute;
-            top: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             width: 100%;
             letter-spacing: 1.5px;
             line-height: 30px;
@@ -497,7 +456,6 @@ body {
 
             .address {
                 border-top: 1px solid $mainColor;
-                float: left;
                 width: 48%;
 
                 a {
@@ -507,7 +465,6 @@ body {
 
             .mailList {
                 border-top: 1px solid $mainColor;
-                float: right;
                 width: 48%;
 
                 a {
@@ -515,6 +472,13 @@ body {
                 }
             }
         }
+    }
+
+    //div to push the footer bottom
+    .pusher {
+        width: 100%;
+        height: 50px;
+        clear: both;
     }
 
     footer {
@@ -525,5 +489,68 @@ body {
         padding: 5px 6%;
         position: absolute;
         bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    body {
+
+        &.about, &.contact, &.projects {
+            .overlay {
+                background: rgba(#fff, 0.9);
+            }
+        }
+
+        header {
+
+            &#homeHeader {
+
+                &.reduce {
+                    width: 100%;
+
+                    .logo {
+                        transform: scale(0.6);
+                        transition: none;
+                        @include easeOutLong;
+                    }
+                }
+
+                .logo {
+                    transform: scale(0.8);
+                    transition: none;
+                    @include easeOutLong;
+                }
+            }
+
+            .menu {
+                width: 100%;
+            }
+        }
+
+        main {
+            &.reduce {
+                left: -100%;
+                @include easeOut;
+            }
+
+            section {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .contactInfo {
+                flex-direction: column;
+                margin: auto;
+
+                .address {
+                    width: 100% ;
+                    margin-bottom: 40px;
+                }
+
+                .mailList {
+                    width:100%;
+                }
+            }
+        }
     }
 }
