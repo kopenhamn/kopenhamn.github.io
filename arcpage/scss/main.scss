@@ -12,10 +12,10 @@ html {
 
 body {
     height: 100%;
+    padding: 0;
 
     #container {
         box-sizing: border-box;
-        border: 1px solid transparent;
         min-height: 100%;
         box-sizing: border-box;
         position: relative;
@@ -123,6 +123,7 @@ body {
     ////////////////////////////////////////////////
     header {
         position: relative;
+        top: 0;
         left: 0;
 
         &.reduce {
@@ -172,10 +173,16 @@ body {
 
         ///////////////// LOGO reduced ////////////////
         &#aboutHeader {
+            height: 56px;
+            position: relative;
+            top: 0;
+            left: 0;
+
             .logo {
+                text-align: left;
+                position: absolute;
                 z-index: 3;
                 margin: 0;
-                position: fixed;
                 top: 0;
                 left: 50%;
                 transform: scale(0.3) translateX(-50%);
@@ -194,7 +201,7 @@ body {
 
         ////////////// fixed TOP FIELD ////////////////
         .headLine {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -544,8 +551,8 @@ body {
                     &.reduce {
                         top: 3px;
                         margin: 0;
-                        transform: scale(0.6) translateX(0);
-                        transform-origin: top center;
+                        left: 50%;
+                        transform: scale(0.6) translateX(-50%);
                     }
                 }
             }
