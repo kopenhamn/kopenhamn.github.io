@@ -1,4 +1,6 @@
-/*
+/*$secondColorA: rgba(rgb(241, 221, 37), 0.5);
+
+
 // GREY-YELLOW
 
 $mainColor: #444;
@@ -101,7 +103,7 @@ body {
       color: #fff;
       margin: 30px;
       padding: 15px;
-      background: rgba(241, 221, 37, 0.5);
+      background: #f7b500;
       transition: all 2s ease-out; }
       body header .logo a {
         text-decoration: none; }
@@ -135,7 +137,7 @@ body {
         left: 50%;
         transform: scale(0.3) translateX(-50%);
         transform-origin: top left;
-        background: rgba(241, 221, 37, 0.5);
+        background: rgba(247, 181, 0, 0.5);
         transition: all 2s ease-out; }
         body header#aboutHeader .logo.reduce {
           left: 0;
@@ -238,7 +240,7 @@ body {
       font-size: 60px;
       letter-spacing: 5px; }
       body main h1 span {
-        color: #f1dd25; }
+        color: #f7b500; }
     body main section {
       box-sizing: border-box;
       width: 50%;
@@ -246,7 +248,7 @@ body {
       line-height: 1.5; }
       body main section h2 {
         font-weight: normal;
-        border-bottom: 1px solid #f1dd25;
+        border-bottom: 1px solid #f7b500;
         margin: 50px 0 20px 0; }
       body main section .bio p {
         margin: 10px;
@@ -276,15 +278,14 @@ body {
             height: 200px;
             top: 0;
             left: 0;
-            padding-top: 85px;
+            padding-top: 30px;
             opacity: 0;
             transition: all 0.5s ease-out; }
             body main section .staf .wrapper .team-member .mailMe:hover {
               opacity: 0.8;
               background: #444;
               color: #fff;
-              transition: all 0.5s ease-out;
-              text-align: center; }
+              transition: all 0.5s ease-out; }
     body main .projects {
       box-sizing: border-box;
       width: 100%;

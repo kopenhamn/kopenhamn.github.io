@@ -141,7 +141,7 @@ body {
             color: #fff;
             margin: 30px;
             padding: 15px ;
-            background: $secondColorA;
+            background: $secondColor;
             @include easeOutLong;
 
             a {
@@ -405,7 +405,7 @@ body {
                             height: 200px;
                             top: 0;
                             left: 0;
-                            padding-top: 85px;
+                            padding-top: 30px;
                             opacity: 0;
                             @include easeOut;
 
@@ -414,7 +414,6 @@ body {
                                 background: $mainColor;
                                 color: #fff;
                                 @include easeOut;
-                                text-align: center;
                             }
                         }
                     }
