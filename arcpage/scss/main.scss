@@ -437,7 +437,7 @@ body {
                 background: url('../img/proOverlay.jpg');
                 background-size: cover;
                 position: relative;
-                margin: 20px;
+                margin: 10px;
 
                 img {
                     width: 310px;
@@ -570,6 +570,28 @@ body {
             section {
                 width: 100%;
                 padding: 0 20px;
+            }
+
+            .projects {
+                box-sizing: border-box;
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                .myProject {
+                    width: 90vw;
+                    height: 50vh;
+                    margin: 10px auto;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: opacity 1s ease;
+
+                        &:hover {
+                            transition: opacity 1s ease;
+                        }
+                    }
+                }
             }
 
             .contactInfo {
