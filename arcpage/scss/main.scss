@@ -141,7 +141,7 @@ body {
             color: #fff;
             margin: 30px;
             padding: 15px ;
-            background: $secondColor;
+            background: rgba($secondColor, 0.5);
             @include easeOutLong;
 
             a {
@@ -405,14 +405,14 @@ body {
                             height: 200px;
                             top: 0;
                             left: 0;
-                            padding-top: 30px;
+                            padding-top: 80px;
                             opacity: 0;
                             @include easeOut;
 
                             &:hover {
                                 opacity: 0.8;
-                                background: $mainColor;
-                                color: #fff;
+                                background: #fff;
+                                color: $mainColor;
                                 @include easeOut;
                             }
                         }
