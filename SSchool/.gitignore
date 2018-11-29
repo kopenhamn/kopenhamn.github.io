@@ -1,0 +1,4 @@
+node_modules
+.sass-cache
+.DS_Store
+OwlCarousel2-2.3.4
