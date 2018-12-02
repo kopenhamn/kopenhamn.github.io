@@ -3,7 +3,7 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     body {
-        overflow-x: hidden;
+        //overflow-x: scroll;
 
         &::-webkit-scrollbar {
             display: none;
@@ -123,6 +123,21 @@
 
             #top {
                 padding: 70px 0;
+            }
+
+            .wraper {
+                width: 100%;
+                padding: 0 10px;
+
+                #price {
+
+                    .price-list {
+
+                        .table {
+                            overflow: scroll;
+                        }
+                    }
+                }
             }
 
             #contact {

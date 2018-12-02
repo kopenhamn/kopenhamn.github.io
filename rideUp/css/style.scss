@@ -134,7 +134,8 @@ body {
                     margin: 30px 0;
                     padding: 10px;
                     max-width: 100%;
-                    overflow: hidden;
+                    overflow-x: scroll;
+
 
                     h2 {
 
@@ -142,6 +143,7 @@ body {
 
                     .table {
                         margin: 30px 0;
+                        //overflow: scroll;
                     }
                 }
 

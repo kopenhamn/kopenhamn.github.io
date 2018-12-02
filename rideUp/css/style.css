@@ -211,7 +211,7 @@ body {
           margin: 30px 0;
           padding: 10px;
           max-width: 100%;
-          overflow: hidden; }
+          overflow-x: scroll; }
           body main .wraper #price .price-list .table {
             margin: 30px 0; }
         body main .wraper #price .more-info {
@@ -415,95 +415,98 @@ body {
       padding: 0 15px; }
 
 @media (max-width: 767.98px) {
-  body {
-    overflow-x: hidden; }
-    body::-webkit-scrollbar {
-      display: none; }
-    body header nav .menu-btn {
-      display: block; }
-    body header nav .left-nav {
-      position: fixed;
-      background: linear-gradient(90.75deg, #faf4f0 0, #ebf1fc 100%);
-      z-index: 5;
-      top: 0;
-      left: 0;
-      flex-direction: row;
-      width: 100vw;
-      height: 70px;
-      padding-top: 0;
-      padding-left: 35px;
-      transform: translate3d(100vw, 0, 0);
+  body::-webkit-scrollbar {
+    display: none; }
+  body header nav .menu-btn {
+    display: block; }
+  body header nav .left-nav {
+    position: fixed;
+    background: linear-gradient(90.75deg, #faf4f0 0, #ebf1fc 100%);
+    z-index: 5;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    width: 100vw;
+    height: 70px;
+    padding-top: 0;
+    padding-left: 35px;
+    transform: translate3d(100vw, 0, 0);
+    transition: 0.5s transform ease-out; }
+    body header nav .left-nav a {
+      padding: 15px; }
+      body header nav .left-nav a:hover {
+        background: rgba(80, 80, 80, 0.05); }
+    body header nav .left-nav.show {
+      transform: translate3d(0, 0, 0);
       transition: 0.5s transform ease-out; }
-      body header nav .left-nav a {
-        padding: 15px; }
-        body header nav .left-nav a:hover {
-          background: rgba(80, 80, 80, 0.05); }
-      body header nav .left-nav.show {
-        transform: translate3d(0, 0, 0);
-        transition: 0.5s transform ease-out; }
-    body header nav .right-nav {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      background: linear-gradient(90.75deg, #faf4f0 0, #ebf1fc 100%);
-      flex-direction: row;
-      width: 100vw;
-      height: 70px;
-      padding-bottom: 0;
-      padding-right: 35px;
-      justify-content: flex-end;
-      z-index: 5;
-      transform: translate3d(-100vw, 0, 0);
+  body header nav .right-nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90.75deg, #faf4f0 0, #ebf1fc 100%);
+    flex-direction: row;
+    width: 100vw;
+    height: 70px;
+    padding-bottom: 0;
+    padding-right: 35px;
+    justify-content: flex-end;
+    z-index: 5;
+    transform: translate3d(-100vw, 0, 0);
+    transition: 0.5s all ease-out; }
+    body header nav .right-nav a {
+      padding: 15px; }
+      body header nav .right-nav a:hover {
+        background: rgba(80, 80, 80, 0.05); }
+    body header nav .right-nav.show {
+      transform: translate3d(0, 0, 0);
       transition: 0.5s all ease-out; }
-      body header nav .right-nav a {
-        padding: 15px; }
-        body header nav .right-nav a:hover {
-          background: rgba(80, 80, 80, 0.05); }
-      body header nav .right-nav.show {
-        transform: translate3d(0, 0, 0);
-        transition: 0.5s all ease-out; }
-    body main.head.main-height {
-      overflow: scroll;
+  body main.head.main-height {
+    overflow: scroll;
+    height: 100%; }
+    body main.head.main-height::-webkit-scrollbar {
+      display: none; }
+  body main.head #top .top-container #logo {
+    font-size: 10vw; }
+  body main.head #select .select {
+    flex-direction: column;
+    padding: 2vh 0 4vh;
+    height: 100%; }
+    body main.head #select .select a {
+      height: 25vh;
+      margin: 5px 0; }
+      body main.head #select .select a .sel-bg img {
+        max-width: 100%; }
+  body main #top {
+    padding: 70px 0; }
+  body main .wraper {
+    width: 100%;
+    padding: 0 10px; }
+    body main .wraper #price .price-list .table {
+      overflow: scroll; }
+  body main #contact .wraper {
+    padding: 70px 0; }
+    body main #contact .wraper .contact-info {
+      max-width: 30vh; }
+      body main #contact .wraper .contact-info span {
+        color: #fffc00; }
+      body main #contact .wraper .contact-info p {
+        font-weight: lighter; }
+      body main #contact .wraper .contact-info h2 {
+        font-size: 50px; }
+      body main #contact .wraper .contact-info a {
+        color: #fffc00;
+        padding: 5px 7px;
+        background: #505050;
+        border-radius: 3px; }
+        body main #contact .wraper .contact-info a:hover {
+          text-decoration: none;
+          color: #fff; }
+    body main #contact .wraper .mapouter {
+      text-align: right; }
+    body main #contact .wraper .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
       height: 100%; }
-      body main.head.main-height::-webkit-scrollbar {
-        display: none; }
-    body main.head #top .top-container #logo {
-      font-size: 10vw; }
-    body main.head #select .select {
-      flex-direction: column;
-      padding: 2vh 0 4vh;
-      height: 100%; }
-      body main.head #select .select a {
-        height: 25vh;
-        margin: 5px 0; }
-        body main.head #select .select a .sel-bg img {
-          max-width: 100%; }
-    body main #top {
-      padding: 70px 0; }
-    body main #contact .wraper {
-      padding: 70px 0; }
-      body main #contact .wraper .contact-info {
-        max-width: 30vh; }
-        body main #contact .wraper .contact-info span {
-          color: #fffc00; }
-        body main #contact .wraper .contact-info p {
-          font-weight: lighter; }
-        body main #contact .wraper .contact-info h2 {
-          font-size: 50px; }
-        body main #contact .wraper .contact-info a {
-          color: #fffc00;
-          padding: 5px 7px;
-          background: #505050;
-          border-radius: 3px; }
-          body main #contact .wraper .contact-info a:hover {
-            text-decoration: none;
-            color: #fff; }
-      body main #contact .wraper .mapouter {
-        text-align: right; }
-      body main #contact .wraper .gmap_canvas {
-        overflow: hidden;
-        background: none !important;
-        height: 100%; }
-    body footer {
-      background: rgba(80, 80, 80, 0.5);
-      font-size: 3vw; } }
+  body footer {
+    background: rgba(80, 80, 80, 0.5);
+    font-size: 3vw; } }
