@@ -4,15 +4,22 @@
 @media (max-width: 767.98px) {
     body {
         //overflow-x: scroll;
-
         &::-webkit-scrollbar {
             display: none;
         }
-        header {
 
+        header {
             nav {
                 .menu-btn {
                     display: block;
+                }
+
+                #call {
+                    &.show {
+                        opacity: 1;
+                        bottom: 75px;
+                        transition: 1s all ease-out;
+                    }
                 }
 
                 .left-nav {
@@ -25,7 +32,7 @@
                     width: 100vw;
                     height: 70px;
                     padding-top: 0;
-                    padding-left: 35px;
+                    padding-left: 5px;
                     transform: translate3d(100vw, 0, 0);
                     transition: 0.5s transform ease-out;
 
@@ -52,7 +59,7 @@
                     width: 100vw;
                     height: 70px;
                     padding-bottom: 0;
-                    padding-right: 35px;
+                    padding-right: 5px;
                     justify-content: flex-end;
                     z-index: 5;
                     transform: translate3d(-100vw, 0, 0);
@@ -65,6 +72,7 @@
                             background: rgba($dark-color, 0.05);
                         }
                     }
+
                     &.show {
                         transform: translate3d(0, 0, 0);
                         transition: 0.5s all ease-out;
@@ -74,10 +82,8 @@
         }
 
         main {
-
             ///CSS for HEAD PAGE///
             &.head {
-
                 &.main-height {
                     overflow: scroll;
                     height: 100%;
@@ -87,11 +93,8 @@
                     }
                 }
 
-
                 #top {
-
                     .top-container {
-
                         #logo {
                             font-size: 10vw;
                         }
@@ -99,7 +102,6 @@
                 }
 
                 #select {
-
                     .select {
                         flex-direction: column;
                         padding: 2vh 0 4vh;
@@ -118,9 +120,7 @@
                     }
                 }
             }
-
             ///END of CSS for HEAD PAGE///
-
             #top {
                 padding: 70px 0;
             }
@@ -130,20 +130,35 @@
                 padding: 0 10px;
 
                 #price {
-
                     .price-list {
-
                         .table {
                             overflow: scroll;
+                        }
+                    }
+
+                    .more-info {
+                        padding: 20px;
+
+                        .waranty {
+                            margin: 50px 0;
+                            padding: 20px;
+                        }
+                    }
+                }
+
+                #impo-info {
+
+                    .center {
+                        .list {
+                            width: 90%;
                         }
                     }
                 }
             }
 
             #contact {
-
                 .wraper {
-                    padding: 70px 0;
+                    padding: 10px;
 
                     .contact-info {
                         //padding: 0;
@@ -152,7 +167,6 @@
                         //text-align: center;
                         max-width: 30vh;
                         //margin: auto;
-
                         span {
                             color: $bright-color;
                         }

@@ -44,6 +44,23 @@ header {
             }
         }
 
+        #call {
+            opacity: 0;
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            transition: 1s all ease-out;
+
+            svg {
+
+                path {
+                    fill: $icon-color;
+                }
+            }
+        }
+
         .active {
             background: rgba($dark-color, 0.1);
         }
