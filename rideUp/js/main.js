@@ -4,6 +4,7 @@ $(document).ready(function() {
     let main = $('main');
     let leftNav = $('.left-nav');
     let rightNav = $('.right-nav');
+    let call = $('#call');
 
     function ready() {
         element.click(upMe)
@@ -28,11 +29,13 @@ $(document).ready(function() {
         if(menuBtn.hasClass('close')) {
             menuBtn.removeClass('close');
             leftNav.removeClass('show');
-            rightNav.removeClass('show')
+            rightNav.removeClass('show');
+            call.removeClass('show')
         } else {
             menuBtn.addClass('close');
             leftNav.addClass('show');
-            rightNav.addClass('show')
+            rightNav.addClass('show');
+            call.addClass('show')
         }
     }
 
