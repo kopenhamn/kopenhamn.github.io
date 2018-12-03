@@ -5,6 +5,9 @@ $(document).ready(function() {
     let leftNav = $('.left-nav');
     let rightNav = $('.right-nav');
     let call = $('#call');
+    let aIcon = $('#about-icon');
+    let pIcon = $('#price-icon');
+    let cIcon = $('#contact-icon');
 
     function ready() {
         element.click(upMe)
@@ -43,8 +46,30 @@ $(document).ready(function() {
 
     //caches a jQuery object containing the class .clos (for hiding navigation on scrollin the window)
     $(window).scroll(function() {
+        let windowTop = $(window).scrollTop();
+        let docHeight = $(document).height();
+        let screen = $(window).innerHeight();
+
         if(menuBtn.hasClass('close')) {
             show();
+        };
+
+        //adding class .active to icons if top of window riches the category place
+        
+        if(windowTop < screen) {
+            aIcon.removeClass('active');
+            pIcon.removeClass('active');
+            cIcon.removeClass('active')
+        }else if(windowTop > screen - 1 && !aIcon.hasClass('active') && windowTop < screen * 2) {
+            aIcon.addClass('active');
+            pIcon.removeClass('active')
+        } else if (windowTop > screen * 2 - 1 && !pIcon.hasClass('active') && windowTop < docHeight-screen-1) {
+            aIcon.removeClass('active');
+            pIcon.addClass('active');
+            cIcon.removeClass('active')
+        } else if (windowTop > docHeight-screen-1 && !cIcon.hasClass('active')) {
+            pIcon.removeClass('active');
+            cIcon.addClass('active')
         }
     });
 });

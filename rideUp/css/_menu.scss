@@ -2,6 +2,9 @@
 header {
 
     nav {
+        position: relative;
+        z-index: 10;
+        
         // Menu Button
         .menu-btn {
             display: none;
@@ -52,6 +55,8 @@ header {
             transform: translateX(-50%);
             z-index: 10;
             transition: 1s all ease-out;
+            background: $bright-color;
+            border-radius: 50%;
 
             svg {
 

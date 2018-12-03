@@ -127,38 +127,77 @@
                 padding: 70px 0;
             }
 
-            .wraper {
+            #about {
+                padding: 70px 30px;
+
+
+                .bio-content {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    padding: 0 30px;
+                    transform: translateY(-50%);
+
+                    .bio-image {
+                        display: none;
+                    }
+
+                    .bio {
+                        width: 100%;
+                    }
+                }
+
+                .more-bio {
+                    display: none;
+                }
+
+                .about-botom {
+                    bottom: 15px;
+                    left: 15px;
+                    right: 15px;
+                }
+            }
+
+            #price {
                 width: 100%;
-                padding: 0 10px;
+                padding: 70px 10px;
 
-                #price {
+                h1 {
+                    padding-bottom: 20px;
+                    font-size: 50px;
+                }
 
-                    .price-list {
+                .price-list {
 
-                        table {
+                    table {
 
-                            thead {
-                                tr {
+                        thead {
+                            tr {
 
-                                    th {
-                                        min-width: 14vw;
+                                th {
+                                    min-width: 14vw;
 
-                                        &.naming {
-                                            min-width: 80vw;
-                                        }
+                                    &.naming {
+                                        min-width: 80vw;
                                     }
                                 }
                             }
                         }
                     }
+                }
+            }
 
-                    .more-info {
+            .wraper {
+                width: 100%;
+                padding: 0 10px;
+
+                .more-info {
+                    padding: 0 20px;
+
+                    .waranty {
+                        margin: 50px 0;
                         padding: 20px;
-
-                        .waranty {
-                            margin: 50px 0;
-                            padding: 20px;
-                        }
                     }
                 }
 
