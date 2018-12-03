@@ -141,9 +141,33 @@ body {
 
                     }
 
-                    .table {
+                    table {
                         margin: 30px 0;
-                        //overflow: scroll;
+
+                        thead {
+                            color: #fff;
+                            font-size: 20px;
+                            font-weight: bold;
+                            background: rgba($dark-color, 0.7);
+
+                            th {
+                                text-align: center;
+
+                                &.naming {
+                                    text-align: left;
+                                }
+                            }
+                        }
+
+                        tbody {
+
+                            tr {
+
+                                td {
+                                    text-align: center;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -211,27 +235,30 @@ body {
                     max-width: 300px;
                     margin: auto;
 
-                    span {
-                        color: $bright-color;
-                    }
+                    .info {
 
-                    p {
-                        font-weight: lighter;
-                    }
+                        span {
+                            color: $bright-color;
+                        }
 
-                    h2 {
-                        font-size: 50px;
-                    }
+                        p {
+                            font-weight: lighter;
+                        }
 
-                    a {
-                        color: $bright-color;
-                        padding: 5px 7px;
-                        background: $dark-color;
-                        border-radius: 3px;
+                        h2 {
+                            font-size: 50px;
+                        }
 
-                        &:hover {
-                            text-decoration: none;
-                            color: #fff;
+                        a {
+                            color: $bright-color;
+                            padding: 5px 7px;
+                            background: $dark-color;
+                            border-radius: 3px;
+
+                            &:hover {
+                                text-decoration: none;
+                                color: #fff;
+                            }
                         }
                     }
                 }
