@@ -4,14 +4,14 @@ header {
     nav {
         position: relative;
         z-index: 10;
-        
+
         // Menu Button
         .menu-btn {
             display: none;
             position: fixed;
             z-index: 10;
-            right: 25px;
-            top: 25px;
+            right: 20px;
+            bottom: 10px;
             cursor: pointer;
             transition: 0.3s all ease-out;
 
@@ -26,7 +26,7 @@ header {
             // Rotate Into X With Menu Lines
 
             &.close {
-                transform: rotate(180deg) translate(0, 5px);
+                transform: rotate(180deg) translate(0, 0px);
 
                 .btn-line {
                     // Line 1 -Rotate
@@ -70,6 +70,10 @@ header {
             background: rgba($dark-color, 0.1);
         }
 
+        .pusher {
+            display: none;
+        }
+
         .left-nav {
             position: fixed;
             top: 0;
@@ -110,70 +114,62 @@ header {
     }
 }
 
+@media (max-width: 767.98px) {
+    header {
 
-/*
+        nav {
+            .menu-btn {
+                display: block;
+                padding: 15px 10px 10px 10px;
+            }
 
-&-nav {
-    margin: 0;
-    padding: 0;
-    background: darken($primary-color, 5);
-    list-style: none;
-    transform: translate3d(0, -100%, 0);
-    @include easeOut;
+            #call {
 
-    &.show {
-        //Slide in from top
-        transform: translate3d(0, 0, 0);
+                &.show {
+                    opacity: 1;
+                    bottom: 35px;
+                    transition: 1s all ease-out;
+                }
+            }
+
+
+
+            .left-nav {
+                background: linear-gradient(90.75deg,#faf4f0 0,#ebf1fc 100%);
+                z-index: 5;
+                top: auto;
+                left: auto;
+                bottom: 0;
+                right: 0;
+                //display: inline-block;
+                flex-direction: row;
+                justify-content: center;
+                width: 100vw;
+                height: 70px;
+                padding-top: 0;
+                padding-left: 60px;
+                padding-right: 60px;
+                transform: translate3d(100vw, 0, 0);
+                transition: 0.5s transform ease-out;
+
+                .pusher {
+                    display: block;
+                    width: 25vw;
+                }
+
+                a {
+
+                }
+
+                &.show {
+                    transform: translate3d(0, 0, 0);
+                    transition: 0.5s transform ease-out;
+                }
+            }
+
+            .right-nav {
+                display: none;
+            }
+        }
     }
 }
-
-// Branding Slide
-&-branding {
-    background: $primary-color;
-    transform: translate3d(0, 100%, 0);
-    @include easeOut;
-
-    &.show {
-        //Slide in from bottom
-        transform: translate3d(0, 0, 0);
-    }
-    .portrait {
-        width: 250px;
-        height: 250px;
-        background: url('../img/portrait.jpg');
-        border-radius: 50%;
-        border: solid 3px $secondary-color;
-    }
-}
-
-.nav-item {
-    transform: translate3d(600px, 0, 0);
-    @include easeOut;
-
-    &.show {
-        //Slide in from right
-        transform: translate3d(0, 0, 0);
-    }
-
-    &.current > a {
-        color: $secondary-color;
-    }
-}
-
-.nav-link {
-    display: inline-block;
-    position: relative;
-    font-size: 30px;
-    text-transform: uppercase;
-    padding: 1rem 0;
-    font-weight: 300;
-    color: set-text-color($primary-color);
-    text-decoration: none;
-    @include easeOut;
-
-    &:hover {
-        color: $secondary-color;
-    }
-}
-
-*/

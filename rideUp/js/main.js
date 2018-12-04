@@ -3,7 +3,6 @@ $(document).ready(function() {
     let menuBtn = $('#menu-btn');
     let main = $('main');
     let leftNav = $('.left-nav');
-    let rightNav = $('.right-nav');
     let call = $('#call');
     let aIcon = $('#about-icon');
     let pIcon = $('#price-icon');
@@ -32,12 +31,10 @@ $(document).ready(function() {
         if(menuBtn.hasClass('close')) {
             menuBtn.removeClass('close');
             leftNav.removeClass('show');
-            rightNav.removeClass('show');
             call.removeClass('show')
         } else {
             menuBtn.addClass('close');
             leftNav.addClass('show');
-            rightNav.addClass('show');
             call.addClass('show')
         }
     }
@@ -49,25 +46,28 @@ $(document).ready(function() {
         let windowTop = $(window).scrollTop();
         let docHeight = $(document).height();
         let screen = $(window).innerHeight();
+        let aboutDiv = screen - 10;
+        let priceDiv = screen * 2 - 10;
+        let contactDiv = docHeight - screen - 10;
 
         if(menuBtn.hasClass('close')) {
             show();
         };
 
         //adding class .active to icons if top of window riches the category place
-        
-        if(windowTop < screen) {
+
+        if(windowTop < aboutDiv) {
             aIcon.removeClass('active');
             pIcon.removeClass('active');
             cIcon.removeClass('active')
-        }else if(windowTop > screen - 1 && !aIcon.hasClass('active') && windowTop < screen * 2) {
+        }else if(windowTop > aboutDiv && !aIcon.hasClass('active') && windowTop < priceDiv) {
             aIcon.addClass('active');
             pIcon.removeClass('active')
-        } else if (windowTop > screen * 2 - 1 && !pIcon.hasClass('active') && windowTop < docHeight-screen-1) {
+        } else if (windowTop > priceDiv && !pIcon.hasClass('active') && windowTop < contactDiv) {
             aIcon.removeClass('active');
             pIcon.addClass('active');
             cIcon.removeClass('active')
-        } else if (windowTop > docHeight-screen-1 && !cIcon.hasClass('active')) {
+        } else if (windowTop > contactDiv && !cIcon.hasClass('active')) {
             pIcon.removeClass('active');
             cIcon.addClass('active')
         }

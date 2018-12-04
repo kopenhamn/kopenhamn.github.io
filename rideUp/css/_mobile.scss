@@ -8,80 +8,6 @@
             display: none;
         }
 
-        header {
-
-            nav {
-                .menu-btn {
-                    display: block;
-                }
-
-                #call {
-
-                    &.show {
-                        opacity: 1;
-                        bottom: 75px;
-                        transition: 1s all ease-out;
-                    }
-                }
-
-                .left-nav {
-                    position: fixed;
-                    background: linear-gradient(90.75deg,#faf4f0 0,#ebf1fc 100%);
-                    z-index: 5;
-                    top: 0;
-                    left: 0;
-                    flex-direction: row;
-                    width: 100vw;
-                    height: 70px;
-                    padding-top: 0;
-                    padding-left: 5px;
-                    transform: translate3d(100vw, 0, 0);
-                    transition: 0.5s transform ease-out;
-
-                    a {
-                        padding: 15px;
-
-                        &:hover {
-                            background: rgba($dark-color, 0.05);
-                        }
-                    }
-
-                    &.show {
-                        transform: translate3d(0, 0, 0);
-                        transition: 0.5s transform ease-out;
-                    }
-                }
-
-                .right-nav {
-                    position: fixed;
-                    bottom: 0;
-                    right: 0;
-                    background: linear-gradient(90.75deg,#faf4f0 0,#ebf1fc 100%);
-                    flex-direction: row;
-                    width: 100vw;
-                    height: 70px;
-                    padding-bottom: 0;
-                    padding-right: 5px;
-                    justify-content: flex-end;
-                    z-index: 5;
-                    transform: translate3d(-100vw, 0, 0);
-                    transition: 0.5s all ease-out;
-
-                    a {
-                        padding: 15px;
-
-                        &:hover {
-                            background: rgba($dark-color, 0.05);
-                        }
-                    }
-
-                    &.show {
-                        transform: translate3d(0, 0, 0);
-                        transition: 0.5s all ease-out;
-                    }
-                }
-            }
-        }
 
         main {
             ///CSS for HEAD PAGE///
@@ -133,11 +59,7 @@
 
                 .bio-content {
                     display: block;
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
                     padding: 0 30px;
-                    transform: translateY(-50%);
 
                     .bio-image {
                         display: none;
@@ -146,10 +68,6 @@
                     .bio {
                         width: 100%;
                     }
-                }
-
-                .more-bio {
-                    display: none;
                 }
 
                 .about-botom {
@@ -202,6 +120,8 @@
                 }
 
                 #impo-info {
+                    display: block;
+                    padding: 50px 0;
 
                     .center {
                         .list {

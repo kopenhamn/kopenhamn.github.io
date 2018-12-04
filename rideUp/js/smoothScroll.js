@@ -1,19 +1,7 @@
 'use strict';
 
 window.addEventListener('load', function() {
-/*
-  // scroll to bottom
-  document.querySelector('.js-scroll-to-bottom').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({ top: document.body.clientHeight - window.innerHeight, left: 0, behavior: 'smooth' });
-  });
 
-  // scroll to top
-  document.querySelector('.js-scroll-to-top').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('#top').scrollIntoView({ behavior: 'smooth' });
-  });
-*/
   // element scroll to #about
   document.querySelector('.scrollable-element-to-about').addEventListener('click', function(e) {
     e.preventDefault();
