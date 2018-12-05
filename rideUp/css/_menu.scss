@@ -5,6 +5,7 @@ header {
         position: relative;
         z-index: 10;
 
+        /*
         // Menu Button
         .menu-btn {
             display: none;
@@ -26,6 +27,8 @@ header {
             // Rotate Into X With Menu Lines
 
             &.close {
+                display: none;
+                /*
                 transform: rotate(180deg) translate(0, 0px);
 
                 .btn-line {
@@ -46,24 +49,10 @@ header {
                 }
             }
         }
+        */
 
         #call {
-            opacity: 0;
-            position: fixed;
-            bottom: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            transition: 1s all ease-out;
-            background: $bright-color;
-            border-radius: 50%;
-
-            svg {
-
-                path {
-                    fill: $icon-color;
-                }
-            }
+            display: none;
         }
 
         .active {
@@ -119,16 +108,35 @@ header {
 
         nav {
             .menu-btn {
+                background: rgb(237, 242, 250);
+                border-radius: 3px;
                 display: block;
                 padding: 15px 10px 10px 10px;
             }
 
             #call {
+                display: block;
+                opacity: 0;
+                position: fixed;
+                bottom: -100px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                background: rgb(242, 242, 246);
+                border-radius: 50%;
+                transition: 1.1s all ease-out;
+
+                svg {
+
+                    path {
+                        fill: $icon-color;
+                    }
+                }
 
                 &.show {
                     opacity: 1;
                     bottom: 35px;
-                    transition: 1s all ease-out;
+                    transition: 1s bottom ease-out;
                 }
             }
 
@@ -147,14 +155,14 @@ header {
                 width: 100vw;
                 height: 70px;
                 padding-top: 0;
-                padding-left: 60px;
-                padding-right: 60px;
-                transform: translate3d(100vw, 0, 0);
+                //padding-left: 60px;
+                //padding-right: 60px;
+                transform: translate3d(0, 70px, 0);
                 transition: 0.5s transform ease-out;
 
                 .pusher {
                     display: block;
-                    width: 25vw;
+                    width: 150px;
                 }
 
                 a {

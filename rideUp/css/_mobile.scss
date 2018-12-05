@@ -12,6 +12,7 @@
         main {
             ///CSS for HEAD PAGE///
             &.head {
+
                 &.main-height {
                     overflow: scroll;
                     height: 100%;
@@ -22,9 +23,26 @@
                 }
 
                 #top {
+
                     .top-container {
                         #logo {
                             font-size: 10vw;
+                        }
+                    }
+
+                    &.upMe {
+                        height: 20vh;
+                        padding: 0;
+
+                        .icons {
+                            opacity: 0;
+                            transition: 1s opacity ease-out;
+                        }
+
+                        h5 {
+                            bottom: 0;
+                            font-size: 1.5vh;
+                            transition: 1s all ease-out;
                         }
                     }
                 }
@@ -32,11 +50,10 @@
                 #select {
                     .select {
                         flex-direction: column;
-                        padding: 2vh 0 4vh;
                         height: 100%;
 
                         a {
-                            height: 25vh;
+                            height: 22vh;
                             margin: 5px 0;
 
                             .sel-bg {
@@ -49,12 +66,19 @@
                 }
             }
             ///END of CSS for HEAD PAGE///
+
             #top {
-                padding: 70px 0;
+                padding: 0 0 70px 0;
             }
 
             #about {
-                padding: 70px 30px;
+                padding: 10px;
+
+                h1 {
+                    padding-bottom: 20px;
+                    padding-right: 20px;
+                    font-size: 50px;
+                }
 
 
                 .bio-content {
@@ -71,26 +95,35 @@
                 }
 
                 .about-botom {
-                    bottom: 15px;
-                    left: 15px;
-                    right: 15px;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
                 }
             }
 
             #price {
                 width: 100%;
-                padding: 70px 10px;
+                padding: 10px;
 
                 h1 {
                     padding-bottom: 20px;
+                    padding-right: 20px;
                     font-size: 50px;
                 }
 
                 .price-list {
-
+                    max-height: 90vh;
+                    position: relative;
+                    padding: 0;
                     table {
 
                         thead {
+                            position: -webkit-sticky;
+                            position: sticky;
+                            top: 0;
+                            background: rgba($dark-color, 0.9);
+
                             tr {
 
                                 th {
