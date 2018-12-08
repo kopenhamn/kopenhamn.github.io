@@ -8,6 +8,16 @@ $(document).ready(function() {
     let pIcon = $('#price-icon');
     let cIcon = $('#contact-icon');
     let prevWindowTop = 70;
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+    if (window.location.hash && isChrome) {
+        setTimeout(function () {
+            var hash = window.location.hash;
+            window.location.hash = "";
+            window.location.hash = hash;
+        }, 300);
+    }
+
 
     function ready() {
         element.click(upMe)
@@ -33,9 +43,9 @@ $(document).ready(function() {
         let windowWidth = $(window).width();
         let docHeight = $(document).height();
         let screen = $(window).innerHeight();
-        let aboutDiv = screen - 10;
-        let priceDiv = screen * 2 - 10;
-        let contactDiv = docHeight - screen - 10;
+        let aboutDiv = screen * 0.75;
+        let priceDiv = screen + aboutDiv;
+        let contactDiv = docHeight - screen - screen * 0.25;
 
         // adding class .active to icons if top of window riches the category place
 

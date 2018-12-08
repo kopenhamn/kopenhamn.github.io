@@ -8,6 +8,12 @@
             display: none;
         }
 
+        //global classes
+
+        //hide some text in mobile screen
+        .bla-bla {
+            display: none;
+        }
 
         main {
             ///CSS for HEAD PAGE///
@@ -116,25 +122,43 @@
                     max-height: 90vh;
                     position: relative;
                     padding: 0;
+
                     table {
 
                         thead {
-                            position: -webkit-sticky;
-                            position: sticky;
-                            top: 0;
-                            background: rgba($dark-color, 0.9);
 
                             tr {
 
                                 th {
                                     min-width: 14vw;
 
-                                    &.naming {
-                                        min-width: 80vw;
+                                    &.sticky-header {
+                                        position: -webkit-sticky;
+                                        position: -moz-sticky;
+                                        position: -ms-sticky;
+                                        position: -o-sticky;
+                                        position: sticky;
+                                        top: 0;
+
+                                        &.naming {
+                                            min-width: 80vw;
+                                        }
                                     }
                                 }
                             }
                         }
+                    }
+                }
+            }
+
+            #categories {
+                padding: 10px;
+
+                .section {
+
+                    h1 {
+                        text-align: right;
+                        font-size: 6vw;
                     }
                 }
             }

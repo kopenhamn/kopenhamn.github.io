@@ -17,13 +17,13 @@ window.addEventListener('load', function() {
   // element scroll to #price
   document.querySelector('.scrollable-element-to-price').addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector('#price').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.smooth-scroll-center').scrollIntoView({ behavior: 'smooth' });
   });
 
   // element scroll to #contact
   document.querySelector('.scrollable-element-to-contact').addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.smooth-scroll-center-2').scrollIntoView({ behavior: 'smooth' });
   });
 });
 

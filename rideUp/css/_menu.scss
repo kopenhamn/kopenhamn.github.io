@@ -124,7 +124,7 @@ header {
                 z-index: 10;
                 background: rgb(242, 242, 246);
                 border-radius: 50%;
-                transition: 1.1s all ease-out;
+                transition: 0.5s all ease-out;
 
                 svg {
 
@@ -136,7 +136,7 @@ header {
                 &.show {
                     opacity: 1;
                     bottom: 35px;
-                    transition: 1s bottom ease-out;
+                    transition: 0.5s bottom ease-out;
                 }
             }
 
@@ -158,7 +158,7 @@ header {
                 //padding-left: 60px;
                 //padding-right: 60px;
                 transform: translate3d(0, 70px, 0);
-                transition: 0.5s transform ease-out;
+                transition: 0.3s transform ease-out;
 
                 .pusher {
                     display: block;
@@ -171,7 +171,7 @@ header {
 
                 &.show {
                     transform: translate3d(0, 0, 0);
-                    transition: 0.5s transform ease-out;
+                    transition: 0.3s transform ease-out;
                 }
             }
 
