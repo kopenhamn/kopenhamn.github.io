@@ -3,12 +3,9 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     body {
-        //overflow-x: scroll;
         &::-webkit-scrollbar {
             display: none;
         }
-
-        //global classes
 
         //hide some text in mobile screen
         .bla-bla {
@@ -16,6 +13,7 @@
         }
 
         main {
+            
             ///CSS for HEAD PAGE///
             &.head {
 
@@ -154,12 +152,9 @@
             #categories {
                 padding: 10px;
 
-                .section {
-
-                    h1 {
-                        text-align: right;
-                        font-size: 6vw;
-                    }
+                h1 {
+                    text-align: right;
+                    font-size: 6vw;
                 }
             }
 
@@ -197,11 +192,6 @@
                     }
                 }
             }
-        }
-
-        footer {
-            background: rgba($dark-color, 0.5);
-            font-size: 3vw;
         }
     }
 }

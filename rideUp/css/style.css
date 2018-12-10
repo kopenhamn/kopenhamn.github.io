@@ -652,7 +652,7 @@ body {
             min-width: 80vw; }
   body main #categories {
     padding: 10px; }
-    body main #categories .section h1 {
+    body main #categories h1 {
       text-align: right;
       font-size: 6vw; }
   body main .wraper {
@@ -671,7 +671,4 @@ body {
   body main #contact .wraper {
     padding: 10px; }
     body main #contact .wraper .contact-info {
-      max-width: 30vh; }
-  body footer {
-    background: rgba(80, 80, 80, 0.5);
-    font-size: 3vw; } }
+      max-width: 30vh; } }

@@ -23,7 +23,7 @@ window.addEventListener('load', function() {
   // element scroll to #contact
   document.querySelector('.scrollable-element-to-contact').addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector('.smooth-scroll-center-2').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.smooth-scroll-center-contact').scrollIntoView({ behavior: 'smooth' });
   });
 });
 
